@@ -22,10 +22,18 @@
   function loadState() {
     try {
       const parsed = JSON.parse(localStorage.getItem(storageKey));
-      return parsed || blankState();
+      return stripSiteStats(parsed || blankState());
     } catch {
       return blankState();
     }
+  }
+
+  function stripSiteStats(nextState) {
+    Object.values(nextState.stats || {}).forEach((item) => {
+      delete item.siteAttempts;
+      delete item.siteCorrect;
+    });
+    return nextState;
   }
 
   function blankState() {
@@ -69,7 +77,10 @@
       <div class="shell">
         <aside class="sidebar">
           <div class="brand">
-            <div class="brand-mark">DS</div>
+            <div class="brand-mark" aria-hidden="true">
+              <span class="logo-bars"><i></i><i></i><i></i></span>
+              <span class="logo-dot"></span>
+            </div>
             <div>
               <h1>Final Review</h1>
               <p>source-bound practice</p>
@@ -157,7 +168,7 @@
       favorites: "收藏板块",
       exam: "期末预测综合测试",
       history: "训练记录",
-      sources: "来源与重点依据"
+      sources: "来源"
     };
     return map[viewState.tab];
   }
@@ -184,8 +195,6 @@
     viewState.questionIndex = Math.max(0, Math.min(viewState.questionIndex, list.length - 1));
     const question = list[viewState.questionIndex];
     const stats = state.stats[question.id] || {};
-    const siteAttempts = stats.siteAttempts || 0;
-    const siteCorrect = stats.siteCorrect || 0;
     const personalAttempts = stats.personalAttempts || 0;
     const personalCorrect = stats.personalCorrect || 0;
 
@@ -195,7 +204,6 @@
           ${list
             .map((item, index) => `<button class="${index === viewState.questionIndex ? "active" : ""}" data-jump="${index}">
               <span>${item.id}</span>
-              <small>${typeLabel(item.type)}</small>
             </button>`)
             .join("")}
         </div>
@@ -215,8 +223,6 @@
           </div>
           ${renderLastResult(question)}
           <div class="stats-row">
-            <div><span>${rate(siteCorrect, siteAttempts)}</span><label>全站正确率</label></div>
-            <div><span>${siteAttempts}</span><label>全站次数</label></div>
             <div><span>${personalAttempts}</span><label>本人次数</label></div>
             <div><span>${rate(personalCorrect, personalAttempts)}</span><label>本人正确率</label></div>
           </div>
@@ -267,8 +273,7 @@
     if (!result || result.questionId !== question.id) return "";
     return `
       <div class="result ${result.correct ? "correct" : "wrong"}">
-        <strong>${result.correct ? "正确" : "需要复盘"}</strong>
-        <p>参考答案：${formatAnswer(question)}</p>
+        <p><strong>参考答案：</strong>${formatAnswer(question)}</p>
         <p>${escapeHtml(question.explanation || "")}</p>
       </div>
     `;
@@ -368,15 +373,11 @@
 
   function recordAttempt(questionId, correct) {
     const current = state.stats[questionId] || {
-      siteAttempts: 0,
-      siteCorrect: 0,
       personalAttempts: 0,
       personalCorrect: 0
     };
-    current.siteAttempts += 1;
     current.personalAttempts += 1;
     if (correct) {
-      current.siteCorrect += 1;
       current.personalCorrect += 1;
     }
     state.stats[questionId] = current;
@@ -575,19 +576,17 @@
   function renderSources() {
     return `
       <section class="source-panel">
-        <h3>PDF 与图片</h3>
+        <h3>PDF 来源</h3>
         <div class="source-grid">
-          ${Object.values(window.SOURCE_FILES)
+          ${Object.entries(window.SOURCE_FILES)
+            .filter(([sourceId]) => sourceId !== "image")
+            .map(([, source]) => source)
             .map((source) => `<a href="${source.file}" target="_blank">
               <strong>${source.originalFile || source.title}</strong>
               <span>${source.title}</span>
             </a>`)
             .join("")}
         </div>
-        <h3>图片重点依据</h3>
-        <ul class="evidence-list">
-          ${window.EXAM_REQUIREMENTS.evidence.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-        </ul>
       </section>
     `;
   }
