@@ -75,7 +75,8 @@ window.TOPICS = [
   { id: "pca_fa", name: "主成分分析与因子分析", group: "无监督学习" },
   { id: "clustering", name: "K-means、层次聚类与 GMM 联系", group: "无监督学习" },
   { id: "naive_bayes", name: "朴素贝叶斯与文本分类", group: "机器学习" },
-  { id: "tree_ensemble", name: "决策树、随机森林与 XGBoost", group: "机器学习" }
+  { id: "tree_ensemble", name: "决策树、随机森林与 XGBoost", group: "机器学习" },
+  { id: "uncategorized", name: "未归类题号", group: "待核对" }
 ];
 
 window.QUESTION_BANK = [
@@ -766,34 +767,6 @@ window.QUESTION_BANK = [
     },
     explanation: "题目要求三维度对比和推荐。只写算法名称不够，需要说明表格结构化数据、资源、鲁棒性和解释沟通。",
     source: { sourceId: "af4", page: 7, section: "简答/综合应用题", question: "2" },
-    finalExam: true
-  },
-  {
-    id: "af1-open-008",
-    topic: "model_selection",
-    type: "open",
-    difficulty: "hard",
-    stem: "样本量 n=35，无约束模型含截距项+4 个解释变量，R²ur=0.78；约束模型（2 个系数联合为 0）R²r=0.72。计算约束 F 统计量（保留 2 位小数），并判断在 5% 水平下是否拒绝原假设（临界值 3.29）。",
-    answer: {
-      accepted: ["F=4.09；因为 4.09>3.29，所以拒绝原假设。"],
-      keywords: ["4.09", "3.29", "拒绝"]
-    },
-    explanation: "该题是作业反馈1填空题8的综合计算形式，题干数字完全来自原题。计算式为 [(0.78-0.72)/2]/[(1-0.78)/(35-4-1)]。",
-    source: { sourceId: "af1", page: 5, section: "填空题", question: "8" },
-    finalExam: true
-  },
-  {
-    id: "af3-open-010",
-    topic: "pca_fa",
-    type: "open",
-    difficulty: "hard",
-    stem: "某班 4 门课程标准化后做 PCA，特征值 λ1=2.4、λ2=1.0、λ3=0.4、λ4=0.2，第一主成分载荷 a1=(0.5,0.5,0.5,0.5)^T，学生 x=(1,0,-1,2)^T。请计算总方差、第一主成分贡献率、前两个累计贡献率、超过80%至少保留几个主成分、该学生第一主成分得分。",
-    answer: {
-      accepted: ["总方差=4；第一主成分贡献率=60%；前两个累计贡献率=85%；至少保留2个主成分；第一主成分得分=1。"],
-      keywords: ["4", "60", "85", "2", "1"]
-    },
-    explanation: "该题是作业反馈3填空题10的综合计算形式，所有数字来自原题。相关系数矩阵总方差等于变量数 4，贡献率按特征值除以总方差计算。",
-    source: { sourceId: "af3", page: 11, section: "填空题", question: "10" },
     finalExam: true
   }
 ];

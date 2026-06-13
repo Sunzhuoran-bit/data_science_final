@@ -1,0 +1,4262 @@
+[
+  {
+    "id": "af1-tf-001",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "easy",
+    "stem": "在进行回归分析时，如果模型显示自变量 X（如：是否临近地铁）对因变量 Y（单位面积房价）的 影响在统计学上显著，则可以判定 X 是导致 Y 变化的因果原因。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-002",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行线性回归模型选择时，由于 BIC 准则相比 AIC 准则对模型复杂度的惩罚力度更大（特别是 当样本量较大时），因此在同一数据集上，使用 BIC 准则选出的最终模型包含的自变量个数往往多于使 用 AIC 准则选出的变量个数。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-003",
+    "topic": "linear_diagnostics",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归模型诊断中，若残差图呈现“喇叭状”，说明模型存在异方差现象，对因变量做对数变换 是唯一的解决方法。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-004",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归模型的假设检验中，F 检验是用来检验每一个变量对因变量 Y 的影响是否显著的。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-005",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在多元线性回归模型中，调整后的 R² 一定小于普通 R²，且可用于不同自变量个数模型的比较。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-006",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 6 题。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "6"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af1-tf-007",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "hard",
+    "stem": "在北京市二手房房价的对数线性回归模型中，加入“城区 × 学区”的交互项后，学区变量的主效应系 数为负值，说明学区房的单位面积房价整体低于非学区房，该交互项的引入无实际意义。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-008",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 8 题。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "8"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af1-tf-009",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归模型中，随着自变量个数的增加，判决系数 R² 总是会趋于增加（或至少保持不变）， 因此在比较包含不同数量自变量的模型时，R² 是衡量模型优劣的最科学指标。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-010",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在分析某城市共享单车骑行时长分布时，如果直方图显示数据右偏，则可以判断大多数用户骑行时间较 长。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-011",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "easy",
+    "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 11 题。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "11"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af1-tf-012",
+    "topic": "linear_diagnostics",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性模型中，QQ 图常用于检验自变量对因变量是否具有显著影响。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "12"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-013",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在多元线性回归模型中，若某个自变量的方差膨胀因子（VIF）为 8，则该变量与其他自变量之间 存在严重的多重共线性，必须从模型中剔除。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "13"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-tf-014",
+    "topic": "linear_diagnostics",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在 QQ 图中，若 QQ 图散点偏移 y=x 参考线较大，我们可以认为误差项存在异方差，即假设 Var(ε)=σ² 不成立。（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "判断题",
+      "question": "14"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-sc-001",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "下列关于线性回归模型诊断与优化的说法中，错误的一项是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "1"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "残差图呈现明显的喇叭状，是模型存在异方差问题的典型特征"
+      },
+      {
+        "key": "B",
+        "text": "对因变量做对数变换，可改善模型的异方差问题与残差非正态问题"
+      },
+      {
+        "key": "C",
+        "text": "自变量的方差膨胀因子为 6.2，说明该变量存在严重的多重共线性，须从模型中剔除"
+      },
+      {
+        "key": "D",
+        "text": "Cook 距离用于识别样本中的强影响点，判断单个样本对模型拟合结果的影响程度"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-002",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在评估线性回归模型的残差图（Residuals vs Fitted）时，如果观察到残差图呈现“喇叭状”，即残差 的波动随着预测值的增加变得剧烈，这说明模型违反了哪项基本假设？PPT 中推荐的解决方案是什么？",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "2"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "存在多重共线性；解决方案是计算方差膨胀因子并剔除变量"
+      },
+      {
+        "key": "B",
+        "text": "遗漏了重要的自变量；解决方案是加入新的自变量，或者考虑非线性模型"
+      },
+      {
+        "key": "C",
+        "text": "误差不服从正态分布；解决方案是观察 QQ 图并剔除 Cook 距离过大的异常点"
+      },
+      {
+        "key": "D",
+        "text": "存在异方差现象；解决方案是对因变量做对数变换（如果因变量取值为正），再进行建模"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-003",
+    "topic": "model_selection",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于线性回归模型中的 F 检验和 t 检验，下列说法正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "3"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "F 检验用于检验单个自变量的显著性，t 检验用于检验所有自变量的整体显著性"
+      },
+      {
+        "key": "B",
+        "text": "F 检验和 t 检验的作用完全相同，可以互换使用"
+      },
+      {
+        "key": "C",
+        "text": "F 检验用于检验所有自变量的整体显著性，t 检验用于检验单个自变量的显著性"
+      },
+      {
+        "key": "D",
+        "text": "F 检验只有在 t 检验结果不显著时才有必要使用"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-004",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "关于线性回归模型的说法中，哪一项是错误的？",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "4"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "如果“残差与预测值”散点图中的残差并不是以 0 为均值分散，而是呈现抛物线形状，通常说明模型遗 漏了重要的自变量或者应该考虑非线性模型"
+      },
+      {
+        "key": "B",
+        "text": "残差的 Q-Q 图两侧“尾巴”明显偏离直线，说明残差与正态分布有一定的差距，可以通过对数变换来进 行改善"
+      },
+      {
+        "key": "C",
+        "text": "在进行多重共线性检验时，可以通过计算方差膨胀因子（VIF）。根据经验，如果某个变量的 VIF 值 超过 5 或者 10，说明存在严重的共线性，需要引起注意"
+      },
+      {
+        "key": "D",
+        "text": "Cook 距离是用来检验模型是否存在异方差现象的重要指标。Cook 距离越大的样本，说明该点处的异 方差问题越严重"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-005",
+    "topic": "linear_diagnostics",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于线性回归中的强影响点与 Cook 距离，下列说法正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "5"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "Cook 距离是针对自变量计算的，每个自变量对应一个 Cook 距离"
+      },
+      {
+        "key": "B",
+        "text": "强影响点是指包含/不包含该样本点时，对模型估计结果影响很大的样本点"
+      },
+      {
+        "key": "C",
+        "text": "Cook 距离越大，说明该样本点对模型的影响越小"
+      },
+      {
+        "key": "D",
+        "text": "强影响点一定是异常值，必须直接从数据中删除"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-006",
+    "topic": "log_linear_house",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "在北京市二手房房价的对数线性回归模型分析中，加入“城区 × 学区”交互项后，学区变量的主效应 系数变为负值，以下对该结果的合理解释是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "6"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "学区房对房价的正向影响完全消失，非学区房房价更高"
+      },
+      {
+        "key": "B",
+        "text": "学区房的溢价效应需结合城区来看，基准城区的学区房溢价不显著甚至存在小幅负向影响"
+      },
+      {
+        "key": "C",
+        "text": "模型出现多重共线性，结果完全不可信"
+      },
+      {
+        "key": "D",
+        "text": "数据存在异常值，需直接删除交互项重新建模"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-007",
+    "topic": "linear_diagnostics",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在线性回归模型中，若存在完全多重共线性，以下哪种情况会发生？",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "7"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "回归系数估计值偏大"
+      },
+      {
+        "key": "B",
+        "text": "无法唯一估计出回归系数"
+      },
+      {
+        "key": "C",
+        "text": "判定系数 R² 变为 0"
+      },
+      {
+        "key": "D",
+        "text": "模型的预测精度显著提高"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-008",
+    "topic": "anova",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "调整后的判决系数为 R²_adjusted = 1 - [(n-1)/(n-p-1)] × (SSE/SST)，其中 p 为自变量个数。关于该 统计量，下列说法正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "8"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "当增加一个不显著的变量时，R²_adjusted 一定减小"
+      },
+      {
+        "key": "B",
+        "text": "对于同一组数据，R²_adjusted 总是小于 R²，但两者的差距会随样本量 n 增大而缩小"
+      },
+      {
+        "key": "C",
+        "text": "R²_adjusted 可用来比较不同因变量变换（如 y 与 log y）的模型拟合效果"
+      },
+      {
+        "key": "D",
+        "text": "R²_adjusted 越接近 1，表明模型对未来观测的预测能力越强"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-009",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "设线性回归模型为 Y = β0 + β1X + β2D + β3(XD) + ε，其中 X 为连续型自变量，D 为取值为 0 或 1 的虚拟变量。下列说法中，正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "9"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "β2 表示两组在所有 X 水平下的平均差异恒为 β2"
+      },
+      {
+        "key": "B",
+        "text": "β1 表示 D=1 组中 X 对 Y 的影响"
+      },
+      {
+        "key": "C",
+        "text": "β3 表示两组中 X 对 Y 的影响是否存在差异"
+      },
+      {
+        "key": "D",
+        "text": "如果 β2<0，则 D=1 组在任意 X 取值下都比 D=0 组的 Y 更小"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-010",
+    "topic": "log_linear_house",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "全模型：price ~ CATE + bedrooms + halls + area + floor + subway + school；简化模型：price ~ CATE + area + floor + school。关于如何在这两个模型中进行选择，以及评估模型好坏，结合模型整体评 价与选择准则，下列说法中不正确的是哪一项？",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "10"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "如果直接比较模型 A 和模型 B 的普通判决系数，模型 A 的 R² 一定大于或等于模型 B，因此不能仅依 靠普通 R² 越大越好来作为剔除 bedrooms 等变量的依据"
+      },
+      {
+        "key": "B",
+        "text": "如果使用调整后的判决系数来对比，它在公式中引入了样本量 n 和自变量个数 p 的惩罚机制，因此可 以用来比较全模型和简化模型的好坏"
+      },
+      {
+        "key": "C",
+        "text": "如果使用 AIC 和 BIC 准则对模型进行选择，由于二手房数据集样本量极大（n>16000），log(n) 远大 于 2，因此 BIC 对保留冗余变量的惩罚力度比 AIC 更大"
+      },
+      {
+        "key": "D",
+        "text": "在 R 语言中，可以使用 step（ ） 函数基于上述准则进行自动筛选。通常情况下，BIC 选出的最终模型保 留的变量个数，会多于 AIC 选出的变量个数"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-011",
+    "topic": "model_selection",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "关于线性回归模型，下列说法错误的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "11"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "F 检验用来检验所有变量中是否有变量对 Y 的影响是显著的"
+      },
+      {
+        "key": "B",
+        "text": "调整后的 R² 可以用于不同模型之间的比较"
+      },
+      {
+        "key": "C",
+        "text": "一般认为 R² 越大，模型拟合效果越好；R² 大于 0.5 时说明模型有实际解释能力"
+      },
+      {
+        "key": "D",
+        "text": "对于有 k 个水平的离散型自变量，需要选择一个水平为基准组，其余水平构造 k-1 个哑变量"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-012",
+    "topic": "log_linear_house",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "以下关于对数线性回归模型 log(y)=β0+β1x1+...+ε 的说法，正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "12"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "若 x1 为连续变量且回归系数 β1=-0.03，则 x1 每增加一个单位，y 平均下降约 3%"
+      },
+      {
+        "key": "B",
+        "text": "对数变换可以完全消除异方差问题"
+      },
+      {
+        "key": "C",
+        "text": "对数线性模型要求 y 必须服从对数正态分布"
+      },
+      {
+        "key": "D",
+        "text": "对数线性模型的残差可以直接用原始模型的残差图来诊断"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-013",
+    "topic": "linear_diagnostics",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "关于模型选择准则 AIC 和 BIC，下列说法正确的是（ ）",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "13"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "选择模型时，应选取 AIC 或 BIC 值最大的模型"
+      },
+      {
+        "key": "B",
+        "text": "AIC 和 BIC 的第一项通常是残差平方和（RSS）的单调函数，代表模型的拟合优度"
+      },
+      {
+        "key": "C",
+        "text": "当样本量 n≥8 时，AIC 对模型复杂度的惩罚力度比 BIC 更大"
+      },
+      {
+        "key": "D",
+        "text": "相比 AIC，BIC 选出来的模型通常包含更多的自变量"
+      }
+    ]
+  },
+  {
+    "id": "af1-sc-014",
+    "topic": "anova",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在模型诊断时，下列结果哪个是我们希望看见的？",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "选择题",
+      "question": "14"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "Q-Q 图散点明显偏离 y=x 参考线"
+      },
+      {
+        "key": "B",
+        "text": "残差以 0 为均值，无规律散乱分布"
+      },
+      {
+        "key": "C",
+        "text": "残差 vs 拟合值图从左向右残差波动不一致"
+      },
+      {
+        "key": "D",
+        "text": "Scale-Location 图红色趋势线不水平"
+      }
+    ]
+  },
+  {
+    "id": "af1-fill-001",
+    "topic": "model_selection",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在线性回归的显著性检验中，______ 检验用于检验单个自变量对因变量的影响是否显著，______ 检验用于检验所有自变量整体对因变量的影响是否显著。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-002",
+    "topic": "naive_bayes",
+    "type": "fill",
+    "difficulty": "hard",
+    "stem": "在进行回归模型选择时，常用的准则有赤池信息准则（AIC）和贝叶斯信息准则（BIC）。这两种 准则不仅考虑模型拟合优度，还包含对模型复杂程度（自变量个数 p）的惩罚。根据公式，AIC 准则的 惩罚项系数是 ______，BIC 准则的惩罚项系数是 ______（填包含样本量 n 的数学公式）。当样本量 n≥8 时，由于 ______，BIC 比 AIC 的惩罚力度要大。因此，往往 BIC 选出来的变量个数要 ______（填“多于” 或“少于”）AIC 选出来的变量个数。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-003",
+    "topic": "linear_diagnostics",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "随着预测值的增大，残差的波动也随之增大，说明模型存在（ ）现象。QQ 图的尾巴偏离直线，说明残差 和（ ）分布有一定差距。对于以上诊断出的结果，我们应该采用（ ）线性回归的方法。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-004",
+    "topic": "log_linear_house",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在建立线性回归模型时，如果一个离散型自变量（例如“所属城区”）有 k 个水平，在建模过程中通 常需要选择其中一个水平作为基准组，并为剩余的水平构造 ________ 个哑变量（虚拟变量）。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-005",
+    "topic": "log_linear_house",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在模型 ln(y)=β0+β1ln(x) 中，系数 β1 表示 x 每变动 1%，y 平均变动 ______。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-006",
+    "topic": "linear_diagnostics",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "残差-预测值图像中，残差并不以 0 为平均水平波动，而是呈现出抛物线形状，说明 ____________________________；如果残差呈现喇叭状，说明出现了 _______ 现象，需要通过 _______ 来改善。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-007",
+    "topic": "log_linear_house",
+    "type": "fill",
+    "difficulty": "hard",
+    "stem": "在线性回归模型中，方差膨胀因子 VIF 用于检验 ______ 问题，通常 VIF 大于 ______ 时表示存在严 重共线性；在二手房案例中，经检验最大 VIF 为 5，说明该问题 ______。若存在多重共线性，可以使用 ______ 方法解决。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-008",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af1 的“填空题”第 8 题。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "8"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af1-fill-009",
+    "topic": "linear_diagnostics",
+    "type": "fill",
+    "difficulty": "easy",
+    "stem": "请写出经典线性回归模型 Y = Xβ + ε 下，对于随机误差项 ε 的假设：______。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af1-fill-010",
+    "topic": "linear_diagnostics",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在模型诊断中，若残差图（横轴为预测值，纵轴为残差）呈现出明显的“喇叭状”（即残差随预测 值增大而波动增大），这通常意味着模型违反了随机误差项的 ______ 假设；若要修正这一问题，可采用 ______。",
+    "source": {
+      "sourceId": "af1",
+      "page": 1,
+      "section": "填空题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-001",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行方差分析 (ANOVA) 时, 如果 F 检验的结果显著 (即 p 值小于显著性水平, 如 0.05), 这 说明所有组的均值都不相等。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-002",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "AIC=-2ln(L)+2*df;BIC=-2ln(L)+df*ln(n) 这里 L 是似然函数值,df 是自由度,n 为样本量; 且 二者越小越好, 是用于评估模型; 两者都是由拟合优度项和固定复杂度惩罚项构成。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-003",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行统计建模时, 如果因变量 Y 是定性数据 (例如: 消费者是否购买某产品 病人的诊断结 果为“得病”或“未得病”), 我们通常可以直接使用经典的线性回归模型进行建模, 而不需要 做任何特殊处理。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-004",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行单因素方差分析时, 其核心思想是将数据的总变异 (SST) 拆分为组间变异 (SSR) 和组 内变异 (SSE)。如果我们计算出的 F 统计量非常大, 通常意味着组内方差 (误差带来的波动) 显著超过了组间方差 (不同处理水平带来的波动), 因此我们没有充分的理由拒绝原假设 (即认 为各组均值相等)。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-005",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "单因素方差分析中, 若 F 检验的 p 值小于 0.05, 说明该因素的所有水平之间均存在显著差异。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-006",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归模型中,F 检验的原假设是“所有自变量的系数 (不包括截距) 都等于 0”。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-007",
+    "topic": "survival_ordinal_count",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在生存分析中,AFT(加速失效时间) 模型和 Cox 比例风险模型对回归系数的解读方向是相同 的: 若某个协变量在两个模型中的系数符号一致, 则说明该变量对生存时间的影响方向也一致。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-008",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归模型中, 我们通常对随机误差项有一下三个假设:a. 零均值 b. 同方差 c. 无相关性。 在这三个假设的基础上我们有时会进一步假设随机误差项符合正态分布。现在若回归模型的 QQ 图散点偏离直线, 这代表模型关于随机误差项同方差错误即出现异方差性。若回归模型的 残差图呈现喇叭状, 这代表回归模型的随机误差项符合正态分布假设错误。出现这两个问题时, 对因变量进行对数变换均是一个不错的解决方案。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-009",
+    "topic": "model_selection",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "调整后的判定系数 (调整 R2 ) 与普通的判定系数 (R2 ), 后者其计算值总是大于普通的 R2 , 因 此可以用来比较不同模型间的拟合效果。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-010",
+    "topic": "logistic_roc",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "设某二分类问题的 logistic 回归模型为 p log = −1 + 0.5x. 1−p 当 x = 2 时, 若按照分类规则“当预测概率大于阈值 c 时判为 1, 否则判为 0”, 且取 c = 0.5 , 则该样本会被判为 1。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-011",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在北京市二手房数据分析中, 线性回归模型的残差图呈现“喇叭状”分布, 说明模型存在异方 差问题。为了解决这一问题, 可以对因变量“单位面积房价”进行对数变换。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "11"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-012",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "方差分析是一种特殊的线性回归模型, 其自变量为分类变量, 因变量为连续型数值变量。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "12"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-013",
+    "topic": "linear_diagnostics",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在线性回归中, 如果残差图呈明显“喇叭口”形状, 说明模型可能存在异方差; 若因变量恒为正, 可考虑对因变量做对数变换后重新建模。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "13"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-014",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在北京市二手房数据的线性回归分析中, 当对因变量” 单位面积房价” 取对数后建立对数线性 回归模型, 此时, 自变量每增加一个单位, 因变量 (单位面积房价) 平均增加 (系数 ×100) 个百 分点。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "14"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-015",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "(a) 单因素方差分析中, SST = SSA + SSE 成立的前提是满足正态性，可加性，方差齐性三 √ 大假设。 (b) 对数线性模型 log(Y ) = β0 + β1 X + ε 中,β1 表示 X 每增加 1,Y 平均增加 β1 个单位。 × √ (c) Cox 比例风险模型是半参数模型, 不需要假设基准风险函数的分布形式。 (d) 方差分析 F 检验显著后, 可直接判断哪两组之间存在显著差异。 × √ (e) V IF > 10 通常认为变量间存在严重多重共线性。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "15"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-016",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在北京市二手房案例中, 本案例所关心的因变量 Y 是“房屋总价”。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "16"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-017",
+    "topic": "survival_ordinal_count",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在定序数据编码为 1、2、3、4 后, 因此这些数字之间可以像普通数值变量一样进行加减乘除 运算。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "17"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-018",
+    "topic": "anova",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在方差分析中, 只要自变量是类别型变量、因变量是数值变量, 就一定不需要任何前提假设, 可 以直接进行 ANOVA。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "18"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-019",
+    "topic": "logistic_roc",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在逻辑回归中, 如果某个解释变量的系数估计值为负, 那么在控制其他变量不变时, 该变量增 加通常会降低 Y = 1 的发生倾向。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "19"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-020",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在完整数据分析流程中包含背景介绍、数据来源与说明、描述性分析、统计建模以及结论与建 议等环节。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "20"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-021",
+    "topic": "logistic_roc",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在逻辑回归中, 若使用极大似然估计得到的系数满足渐近正态, 三种检验 (Wald、得分、似然 比) 有限样本下 P 值完全相同。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "21"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-022",
+    "topic": "log_linear_house",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "二手房回归中面积系数为负, 控制其他不变面积越大单位房价越低。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "22"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-tf-023",
+    "topic": "survival_ordinal_count",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在信用卡逾期数据分析案例中, 因变量“逾期状态”是包含 8 个水平的定序变量 建模策略: 先 01 回归判断是否逾期, 再对逾期样本做定序回归预测严重程度。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "判断题",
+      "question": "23"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-sc-001",
+    "topic": "logistic_roc",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在逻辑回归 (Logistic Regression) 中, 我们通常使用什么函数将线性回归的输出映射到 (0,1) 区间, 以表示概率?",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "1"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "ReLU 函数"
+      },
+      {
+        "key": "B",
+        "text": "Sigmoid 函数 (或 Logistic 函数)"
+      },
+      {
+        "key": "C",
+        "text": "Tanh 函数"
+      },
+      {
+        "key": "D",
+        "text": "Softmax 函数"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-002",
+    "topic": "logistic_roc",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "下列关于 ROC 曲线说法错误的是 （ ）",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "2"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "ROC 的横纵轴是分别是 FPR(Specificity) 和 TPR(Sensitivity)"
+      },
+      {
+        "key": "B",
+        "text": "F P R = F P /(F P + T P ), T P R = T P /(T P + F N )"
+      },
+      {
+        "key": "C",
+        "text": "ROC 曲线与横轴所围成的面积是 AUC"
+      },
+      {
+        "key": "D",
+        "text": "AUC 值越大预测效果越好"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-003",
+    "topic": "log_linear_house",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在新产品在架时间的研究案例中, 分析师分别使用了 AFT 生存回归模型 (Weibull 分布) 和 Cox 生存回归模型对数据进行了拟合。关于这两个模型的估计系数及其解读, 根据讲义内容, 下列说法中不正确的一项是?",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "3"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "AFT 模型是对数线性模型的延伸, 它直接对生存时间建模。在 R 语言的 survreg 函数输 出中, 若某个变量的系数为负值, 表示该因素会缩短产品的预期在架时间。 。在 R coxph"
+      },
+      {
+        "key": "B",
+        "text": "Cox 模型是对风险函数建模, 它不直接预测生存时间, 而是预测“瞬时风险” 输出中, 若某个变量的系数为正值, 表示该因素会增加产品下架的风险。"
+      },
+      {
+        "key": "C",
+        "text": "在同一个案例中, 如果一个因素在 AFT 模型中的估计系数为负, 那么它在 Cox 模型中的 估计系数符号通常也应该是负的。"
+      },
+      {
+        "key": "D",
+        "text": "AFT 需要假设生存分布, Cox 半参数不用约束基准风险 h0 (t) 分布形式。"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-004",
+    "topic": "anova",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在单因素方差分析中, 以下哪个说法是正确的?",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "4"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "原假设是各总体的方差相等 SSA/(a−1)"
+      },
+      {
+        "key": "B",
+        "text": "F ��� = SSE/(n−a) ��F (a − 1, n − a)��"
+      },
+      {
+        "key": "C",
+        "text": "若 F 值小于临界值, 说明因素对因变量有显著影响"
+      },
+      {
+        "key": "D",
+        "text": "方差分析出不需要正态性假设"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-005",
+    "topic": "logistic_roc",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于 AUC, 下列说法中正确的是?",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "5"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "AUC 的取值大小会随着分类阈值 (Threshold) 的改变而发生变化。"
+      },
+      {
+        "key": "B",
+        "text": "AUC 值越接近 0.5, 说明该模型的分类预测效果越理想。"
+      },
+      {
+        "key": "C",
+        "text": "AUC 衡量的是模型在所有可能的分类阈值下的平均表现, 其取值与阈值的选取无关。"
+      },
+      {
+        "key": "D",
+        "text": "当 AUC 等于 1 时, 说明模型对所有样本的预测结果与实际情况完全相反。"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-006",
+    "topic": "logistic_roc",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "逻辑回归 X 系数 =0.5, 下列正确的是",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "6"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "X+1, 概率 +50%"
+      },
+      {
+        "key": "B",
+        "text": "X+1, 发生比 +0.5"
+      },
+      {
+        "key": "C",
+        "text": "X+1, 对数发生比 +0.5"
+      },
+      {
+        "key": "D",
+        "text": "系数无法解释"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-007",
+    "topic": "anova",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于各类回归与方差说法正确的是 （ ）",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "7"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "进球计数用标准泊 (无过离散)"
+      },
+      {
+        "key": "B",
+        "text": "ANOVA 显著则全部组别均值不等"
+      },
+      {
+        "key": "C",
+        "text": "定序回归用潜变量划分区间"
+      },
+      {
+        "key": "D",
+        "text": "LR 用最小二乘 变异来源 SS df MS F A ? ? ? ?"
+      }
+    ]
+  },
+  {
+    "id": "af2-sc-008",
+    "topic": "survival_ordinal_count",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "某研究开展两因素无重复方差, 已知: B 45 3 15 7.5 α = 0.05, F0.05 (2, 6) = 误差 12 6 2 - 总和 117 11 5.14, F0.05 (3, 6) = 4.76, 下列正确?",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "8"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "总自由度计算错误"
+      },
+      {
+        "key": "B",
+        "text": "F= 误差均方/因素均方"
+      },
+      {
+        "key": "C",
+        "text": "FA = 15 > 5.14, 因素 A 显著"
+      },
+      {
+        "key": "D",
+        "text": "满足泊松分布假设"
+      }
+    ]
+  },
+  {
+    "id": "af2-fill-001",
+    "topic": "logistic_roc",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "Logistic Function 和 Logit Function 的区别",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-002",
+    "topic": "survival_ordinal_count",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "Log-rank p=0.12,Wilcoxon p=0.01, 差异集中在申请周期早期",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-003",
+    "topic": "logistic_roc",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "混淆矩阵：TP=90 FN=10 FP=20 TN=80，TPR= ,FPR=",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-004",
+    "topic": "survival_ordinal_count",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "生存无法观测确切失效时间叫 ; 风险建模 ;Cox 与 AFT 系数符号",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-005",
+    "topic": "anova",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "双因素无重复 SST= + + +SSE; 交互显著代表 ; Cox:h(t, X) = h0 (t)eβX ,h0 (t) 是 ;Cox 半参数不用基准分布，AFT 参数需指定分布；泊松： 数据，连接 ，过离 散换",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-006",
+    "topic": "anova",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "单因素 SST=",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-007",
+    "topic": "survival_ordinal_count",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "时长生存建模用 模型解读: 核心理解 X-Y 关系；预测：精准预估未知 Y。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-008",
+    "topic": "logistic_roc",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在定序回归（probit/logit）中，假设因变量 Y 有 5 个类别（如产品满意度：1= 非常不满意， 2= 不满意，3= 一般，4= 满意，5= 非常满意）。潜变量 Z = βX + ε, ε ∼ N (0, 1). 则模型中需要估计的阈值参数 (c1 , c2 , . . . ) 的个数为 。 对于有 K 个类别的定序变量，需要 K − 1 个阈值将实数轴划分为 K 个区间。例如 K = 5 时， 阈值 c1 < c2 < c3 < c4 ，使得： Y = 1, 若Z < c1 ; Y = 2, 若c1 ≤ Z < c2 ; Y = 3, 若c2 ≤ Z < c3 ; Y = 4, 若c3 ≤ Z < c4 ; Y = 5, 若c4 ≤ Z. 因此阈值个数为 K − 1 = 4。 p",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-009",
+    "topic": "logistic_roc",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "log 1−p = log3,odds= ,p =",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-010",
+    "topic": "anova",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "生存非参数 ; 组间检验 ;Cox 风险比不随 变。",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af2-fill-011",
+    "topic": "anova",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "SST= + ;dfT = n − 1 = + SSA/(a−1) ;F = SSE/(n−a)",
+    "source": {
+      "sourceId": "af2",
+      "page": 1,
+      "section": "填空题",
+      "question": "11"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-001",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "聚类分析和分类算法的目的都可能是把个体分到不同类别中，所以二者本质上都是有监督学习。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-002",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在学生成绩主成分分析中，若前两个主成分的累积贡献率超过 80%，就说明这两个综合指标已经完整保 留了原来六门课的全部信息，因此不需要再解释载荷含义。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-003",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在主成分分析中，第一主成分是在所有原始变量的标准化线性组合中，使得方差最大的那个线性组合，且 满足载荷向量的模长为 1 的约束条件。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-004",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "因子分析中，因子及其载荷矩阵的估计不是唯一的，可以通过任意正交矩阵进行旋转，以寻找使因子结构 更简单、解释更清晰的旋转方向。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-005",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "主成分分析与因子分析都属于无监督学习，都可以对数据进行降维，且主成分分析可以进行因子旋转。 （ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-006",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "简单因子分析和主成分分析的区别在于因子分析是用于解释不同变量的差异性而主成分分析是提取所有变 量的共同点（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-007",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在主成分分析（PCA）中，第一主成分的方差总是大于或等于第二主成分的方差。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-008",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "聚类分析（Clustering Analysis）属于一种有监督学习方法，需要样本提前带有类别标签。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-009",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在因子分析中，对因子载荷矩阵进行 varimax 正交旋转后，各变量的共同度会发生变化。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-010",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "聚类分析属于无监督学习，因为在聚类问题中，类别个数与个体标签通常不是事先给定的，而是根据样 本特征之间的相似性形成相对合理的聚集。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-011",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在 K-Means 聚类算法中，由于采用了迭代优化的思想，因此只要初始中心点选择得当，算法一定能收敛 到全局最优解，而不会陷入局部最优。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "11"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-012",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在主成分分析（PCA）中，第一主成分是原始变量的线性组合，其方差在所有主成分中最大，且各主成 分之间互不相关。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "12"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-013",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在数据降维方法中，主成分分析（PCA）和因子分析（FA）得到的估计结果都是唯一的，为了保证数学 推导的严谨性，二者的结果均不能进行坐标轴旋转。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "13"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-014",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行主成分分析（PCA）之前，通常需要对原始数据进行中心化（每个变量减去其均值），但不需要 进行标准化（除以标准差）。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "14"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-015",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行 K-Means 聚类分析时，算法的优势在于它可以自动从数据中推断出最佳的聚类簇数（即 K 值）， 并且由于其内部采用均值计算，该算法对数据集中的极端异常值具有很强的抗干扰能力。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "15"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-016",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "K-Means 算法的核心是最小化各个簇内的样本到质心的欧氏距离平方和，因此该算法在处理非凸形状 （如环状、月牙形分布）的数据簇时，依然能够准确地将不同形状的数据有效分离。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "16"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-017",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在正交因子模型中，如果对载荷矩阵乘以任意一个正交矩阵，得到新的载荷矩阵以及新的因子，这一坐 标旋转操作会改变观测变量边缘分布的协方差矩阵结构。因此，我们必须寻找唯一真实的方差结构。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "17"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-018",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在进行 K 均值(K-means)聚类分析时，初始聚类中心的选择对最终的聚类结果完全没有影响，无论怎么 选都会收敛到相同的类别划分。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "18"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-019",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "聚类分析（Clustering Analysis）、主成分分析（PCA）以及因子分析（Factor Analysis）在建立模型时 都没有事先确定的因变量，因此它们都属于无监督的统计学习方法。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "19"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-020",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "主成分分析（PCA）和因子分析（FA）的本质区别在于，PCA 主要用于数据压缩和降维，而不负责解 释数据背后的原因；而因子分析不仅用于降维，还试图解释原始变量之间相关性的潜在驱动因素。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "20"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-021",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在因子分析中，“公共因子”通常是可以直接观测到的数据变量。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "21"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-022",
+    "topic": "pca_fa",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在 PCA 中，第一主成分等于原始变量的平均值。（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "22"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-tf-023",
+    "topic": "uncategorized",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“判断题”第 23 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "判断题",
+      "question": "23"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-001",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在聚类建模前，通常需要对变量进行标准化。最主要原因是（ ）。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "1"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "标准化可以自动消除异常值"
+      },
+      {
+        "key": "B",
+        "text": "标准化可以防止取值范围大的变量在距离计算中占据过大影响"
+      },
+      {
+        "key": "C",
+        "text": "标准化可以让聚类问题变成分类问题"
+      },
+      {
+        "key": "D",
+        "text": "标准化后类别数 K 就不需要再选择"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-002",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "以下关于主成分分析（PCA）与因子分析（FA）的区别，描述正确的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "2"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 与 FA 本质上完全相同，只是名称不同，都可以解释变量间的相关性"
+      },
+      {
+        "key": "B",
+        "text": "PCA 是一种模型方法，通过公共因子解释变量间的相关性；FA 不涉及模型，通过综合指标解释个体 差异性"
+      },
+      {
+        "key": "C",
+        "text": "PCA 不涉及模型，通过原变量的线性组合构造综合指标来解释个体差异性；FA 是模型方法，假设变 量由公共因子和特殊因子驱动，通过公共因子解释变量间的相关性"
+      },
+      {
+        "key": "D",
+        "text": "PCA 的估计结果不唯一，可以通过因子旋转使解释更清晰；FA 的估计是唯一的"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-003",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于 K-Means 聚类，下列说法错误的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "3"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "需要预先指定聚类数量 K"
+      },
+      {
+        "key": "B",
+        "text": "对异常值比较敏感"
+      },
+      {
+        "key": "C",
+        "text": "属于层次聚类方法"
+      },
+      {
+        "key": "D",
+        "text": "可通过 WGSS 碎石图选择最优 K"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-004",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于 K-means 聚类，下列说法错误的是哪一项？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "4"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "需要先指定聚类个数 K。"
+      },
+      {
+        "key": "B",
+        "text": "算法会反复执行“分配到最近中心点”和“更新中心点均值”。"
+      },
+      {
+        "key": "C",
+        "text": "K-means 对离群点不敏感，并且特别适合 U 型、环状等非凸聚类。"
+      },
+      {
+        "key": "D",
+        "text": "nstart=20 表示用 20 组不同随机初始质心运行，并选择 WGSS 最小的结果。"
+      }
+    ]
+  },
+  {
+    "id": "af3-mc-005",
+    "topic": "clustering",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "stem": "关于层次聚类与 K-means 的比较，下列说法正确的有哪几项？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "5"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "层次聚类可以通过树状图展示嵌套结构，通常不必一开始就规定类别数。"
+      },
+      {
+        "key": "B",
+        "text": "层次聚类具有贪婪性，一旦某个观测值或类被合并，后续通常不能重新分配。"
+      },
+      {
+        "key": "C",
+        "text": "K-means 中观测值一旦被分到某类，就永远不能改变。"
+      },
+      {
+        "key": "D",
+        "text": "无论采用哪种聚类方法，最终类别都应结合业务理解进行解释和验证。 E. K-means 试图寻找 K 个族群划分，使组内平方和 WGSS 尽可能小。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-006",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于主成分分析（PCA）与因子分析，下列说法最准确的是哪一项？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "6"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 是潜变量模型，核心是用公共因子解释原始变量间的相关性。"
+      },
+      {
+        "key": "B",
+        "text": "因子分析的估计结果唯一，不需要旋转；PCA 的结果不唯一，必须旋转后才能解释。"
+      },
+      {
+        "key": "C",
+        "text": "PCA 用原始变量的线性组合构造综合指标，强调解释个体差异；因子分析用公共因子解释变量间相 关性，原始变量可看作由公共因子与特殊因子共同刻画。"
+      },
+      {
+        "key": "D",
+        "text": "PCA 和因子分析都必须事先指定因变量，因此都属于有监督学习。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-007",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于主成分分析（PCA）和因子分析（FA）的区别与联系，以下说法错误的是？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "7"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "主成分分析只负责压缩与降维，不负责解释；而因子分析不仅仅是压缩，更在于解释数据背后隐藏的 原因。"
+      },
+      {
+        "key": "B",
+        "text": "在数学表达上，主成分分析是将主成分表示为原变量的线性组合；而因子分析是将原变量表示为公共 因子的线性组合。"
+      },
+      {
+        "key": "C",
+        "text": "因子分析的估计结果是唯一的，而主成分分析的结果不唯一，可以通过正交旋转寻找最容易解释的成 分。"
+      },
+      {
+        "key": "D",
+        "text": "因子分析模型中包含了公共因子（Common factor）和特殊因子（Specific factor）。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-008",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "针对 K-Means 聚类和层次聚类的特点与适用场景，下列表述正确的是（ ）① K-Means 需要预先指定聚 类个数 K，对异常值敏感，适合大样本数据集 ② 层次聚类无需提前设定类别数，可生成树状谱系结构， 但不适合海量大样本 ③ K-Means 聚类结果受初始质心选取影响，可通过 nstart 和 set.seed（ ）提升稳定性 ④ 层次聚类的 Ward 法合并类时，选择使类内离差平方和增加最大的两类合并",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "8"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "①②③"
+      },
+      {
+        "key": "B",
+        "text": "①②④"
+      },
+      {
+        "key": "C",
+        "text": "①③④"
+      },
+      {
+        "key": "D",
+        "text": "②③④"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-009",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "下列关于主成分分析（PCA）与因子分析（FA）的说法，错误的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "9"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 得到的综合指标（主成分）是原始变量的线性组合，而 FA 中原始变量是公共因子的线性组合。"
+      },
+      {
+        "key": "B",
+        "text": "PCA 的载荷矩阵（主成分系数）是唯一的，而 FA 的载荷矩阵可以通过因子旋转进行改变。"
+      },
+      {
+        "key": "C",
+        "text": "PCA 和 FA 都假设原始变量之间存在潜在的因果结构，并且都需要变量满足正态分布。"
+      },
+      {
+        "key": "D",
+        "text": "因子分析中，公共因子通常是不可直接观测的潜变量（如智力、满意度等）。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-010",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在 K-means 聚类算法中，通常利用哪一种方法来选择较合适的聚类个数(K)？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "10"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "ROC 曲线"
+      },
+      {
+        "key": "B",
+        "text": "WGSS 碎石图（Scree Plot）"
+      },
+      {
+        "key": "C",
+        "text": "决策树剪枝"
+      },
+      {
+        "key": "D",
+        "text": "假设检验的 p 值"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-011",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于层次聚类与 K 均值聚类，下列说法正确的是（ ）。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "11"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "层次聚类必须在开始前指定类别数 K，且每个观测值初始随机分到 K 类中。"
+      },
+      {
+        "key": "B",
+        "text": "K 均值聚类不需要事先确定类别数 K，并且通常用系统树图展示聚类路径。"
+      },
+      {
+        "key": "C",
+        "text": "层次聚类可以从 “每个观测值自成一类” 开始逐步合并，结果常用系统树图表示；K 均值聚类通常需 要先确定类别数 K。"
+      },
+      {
+        "key": "D",
+        "text": "K 均值聚类对离群点不敏感，因此特别适合存在大量异常值的数据。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-012",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于主成分分析（PCA）与因子分析（FA），下列说法正确的是（ ）。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "12"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 寻找原始变量的线性组合，使得到的主成分方差尽可能大，并且不同主成分之间互不相关。"
+      },
+      {
+        "key": "B",
+        "text": "PCA 中所有变量被等同对待，没有自变量与因变量之分，因此也属于无监督学习思路。"
+      },
+      {
+        "key": "C",
+        "text": "FA 的目标之一是用少数不可观测的公共因子解释原始变量之间的相关性，因子载荷反映公共因子对 变量的解释力。"
+      },
+      {
+        "key": "D",
+        "text": "FA 中公共因子的个数必须等于原始变量个数，否则无法起到解释变量相关性的作用。 E. PCA 与 FA 完全相同，二者都只是把变量压缩成更少的指标，不涉及任何模型或潜变量解释。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-013",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在 K-means 聚类算法中，以下哪种⽅法常⽤于帮助确定合适的聚类数目(K)？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "13"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "轮廓系数"
+      },
+      {
+        "key": "B",
+        "text": "WGSS（组内平⽅和）碎石图"
+      },
+      {
+        "key": "C",
+        "text": "肘部法则（Elbow Method）"
+      },
+      {
+        "key": "D",
+        "text": "以上都是"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-014",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在因子分析中，为了让因子及载荷结构更简单、解释更清晰，常使用最大方差法（Varimax method）进 行正交旋转。关于该旋转操作几何与代数特性的描述，以下正确的是？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "14"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "旋转后，各原始变量的共同度会发生改变以适应新的因子。"
+      },
+      {
+        "key": "B",
+        "text": "旋转后，样本点在因子空间中的相对位置和彼此间的几何距离会发生拉伸或缩放。"
+      },
+      {
+        "key": "C",
+        "text": "旋转后，各个坐标轴之间的垂直（正交）关系会被打破，因子之间变为相关。"
+      },
+      {
+        "key": "D",
+        "text": "旋转仅仅改变了参考坐标系的朝向，点距、夹角和共同度均维持原状。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-015",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 15 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "15"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-016",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "主成分分析与因子分析是数据科学中两种极其重要的降维技术。关于这两种算法的核心区别与物理机制， 以下表述不正确的是哪一项？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "16"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 的核心目标是数据压缩与降维，它通过正交变换，将一组可能存在相关性的原始变量，转换为 一组线性不相关的新变量（主成分）。"
+      },
+      {
+        "key": "B",
+        "text": "在提取主成分时，第一主成分（PCI）提取了原始数据中最大的方差（即保留了最多的原始信息）。"
+      },
+      {
+        "key": "C",
+        "text": "在进行 PCA 或因子分析之前，通常必须对原始连续数据进行标准化处理（Z-score），以消除不同变 量之间量纲和数量级差异带来的偏差。"
+      },
+      {
+        "key": "D",
+        "text": "主成分分析与因子分析在数学模型上是完全等价的：两者都假设观测变量是由少数几个潜在的、不可 观测的“公共因子”加上特殊误差项构成的。"
+      }
+    ]
+  },
+  {
+    "id": "af3-mc-017",
+    "topic": "pca_fa",
+    "type": "multiple_choice",
+    "difficulty": "medium",
+    "stem": "下列关于主成分分析（PCA）与因子分析（FA）的表述，完全正确的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "17"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "主成分分析和因子分析均属于无监督统计模型，核心目标都是数据降维，且均可通过 Varimax 正交 旋转提升结果的业务解释性"
+      },
+      {
+        "key": "B",
+        "text": "因子分析的主成分法估计，本质上就是主成分分析，二者只是名称不同，计算过程和结果完全一致"
+      },
+      {
+        "key": "C",
+        "text": "因子得分是用原始变量的线性组合估计得到的潜在变量值，常用回归法（Thomson）和 Bartlett 加权 最小二乘法计算；而主成分得分是原始变量的线性组合，可直接通过载荷矩阵计算得到"
+      },
+      {
+        "key": "D",
+        "text": "因子分析中，某变量的共同度 h=0.9，说明该因子可以解释该变量 90%的方差；而主成分分析中，某 主成分的方差贡献率为 60%，说明该主成分可以解释 60%的变量"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-018",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "某保险公司基于车联网数据开展驾驶行为风险评估，计划先对 14 项行驶指标（行驶里程、平均时速、转 速标准差、疲劳驾驶时长等）进行降维，再根据降维结果将驾驶员分不同风险等级。下列关于该分析流 程的表述，错误的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "18"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "可先采用因子分析将 14 项指标降维为行驶强度、行驶速度、出行习惯 3 个公共因子，提取因子得分 后再进行 K-means 聚类"
+      },
+      {
+        "key": "B",
+        "text": "在聚类分析前必须对原始指标或因子得分进行标准化，否则量纲较大的变量会主导聚类结果"
+      },
+      {
+        "key": "C",
+        "text": "确定 K-means 聚类数时，可通过绘制 WGSS（组内平方和）碎石图，选择曲线下降最平缓处的 K 值 作最优聚类数"
+      },
+      {
+        "key": "D",
+        "text": "若采用层次聚类进行对比分析，可使用 Ward 法（离差平方和法）计算类间距离，该方法通过最小化 类内离差平方和的增量来合并类"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-019",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 19 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "19"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-020",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在进行主成分分析（PCA）之前，通常需要对原始数据进行标准化。如果跳过标准化步骤直接对原始数 据进行 PCA 计算，最可能导致以下哪种结果？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "20"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "算法无法求解协方差矩阵的特征值与特征向量"
+      },
+      {
+        "key": "B",
+        "text": "绝对数值（方差）较大的特征变量将主导主成分的方向，掩盖其他特征的有效信息"
+      },
+      {
+        "key": "C",
+        "text": "主成分之间将不再满足正交性（相互独立）的假设"
+      },
+      {
+        "key": "D",
+        "text": "算法提取出的第一主成分将解释 100%的数据变异性"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-021",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在因子分析中，求解出初始公共因子后，为了使因子的实际业务意义更加清晰、更具可解释性，通常会 进行“因子旋转”。若采用“方差最大化正交旋转”，其背后的核心假设是：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "21"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "旋转后的各个公共因子之间必须允许存在高度相关性"
+      },
+      {
+        "key": "B",
+        "text": "旋转后的各个公共因子之间必须保持完全不相关（即彼此正交）"
+      },
+      {
+        "key": "C",
+        "text": "旋转操作必须增加模型所能解释的总方差比例"
+      },
+      {
+        "key": "D",
+        "text": "旋转后必须消除所有原始变量的特殊因子"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-022",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于主成分分析（PCA）与因子分析（FA）的区别，下列从统计建模角度描述最为严谨的是：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "22"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "PCA 是一种无监督降维技术，而因子分析属于监督分类模型"
+      },
+      {
+        "key": "B",
+        "text": "PCA 将原始观测变量表示为主成分的线性组合，而因子分析将公共因子表示为观测变量的线性组合"
+      },
+      {
+        "key": "C",
+        "text": "PCA 旨在对原始数据的方差进行完全重组；因子分析则假设观测变量由潜在的公共因子和独有的特 殊因子共同生成"
+      },
+      {
+        "key": "D",
+        "text": "PCA 提取的成分数量必须少于原始特征数，而因子分析提取的因子数可以大于原始特征数"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-023",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 23 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "23"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-024",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于数据降维方法中的“主成分分析(PCA)”与“因子分析(FA)”，下列说法中不正确的是哪一项（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "24"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "两者都属于无监督的统计学习方法，即数据中没有明确的因变量。"
+      },
+      {
+        "key": "B",
+        "text": "主成分分析通过寻找原始变量的线性组合来最大化方差，以期最大程度地区分数据中的个体。"
+      },
+      {
+        "key": "C",
+        "text": "因子分析假设原始变量是公共因子和特殊因子的线性组合，其核心目标是解释变量间的相关性。"
+      },
+      {
+        "key": "D",
+        "text": "为了让综合指标的业务意义更加清晰，主成分分析和因子分析都可以通过最大方差法（Varimax）对 结果进行因子旋转。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-025",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在数据科学实战中，为了克服单一聚类算法的局限性，通常会将层次聚类与 K-means 聚类结合使用。关 于这两种算法的结合策略、特性对比及其理论依据，下列说法正确的是：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "25"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "根据算法偏好，K-means 聚类倾向于创建大小不均衡的带状簇，而层次聚类倾向于创建大小相对均衡 的带状簇。但是，层次聚类样本不宜过多。"
+      },
+      {
+        "key": "B",
+        "text": "层次聚类在后续合并过程中具有可逆的动态重新分配机制，因此可以在 K-means 迭代过程中，通过 树状图自动对由于初值选择不当而导致错分的个体进行类别纠正。"
+      },
+      {
+        "key": "C",
+        "text": "K-means 聚类对初始中心点的选择非常敏感，因此可以先在数据集的代表性子集上运行层次聚类来辅 助确定类别数并提供初始中心，再应用于大规模 K-means 聚类。"
+      },
+      {
+        "key": "D",
+        "text": "K-means 算法具有自适应调节功能，在聚类开始后能够根据数据的空间分布特征，自动迭代并计算出 最合适的类别数 K，无需人工提前设定。"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-026",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "在因子分析中，使用最大方差法（Varimax method）对初始载荷矩阵进行正交旋转后，下列哪项指标会 发生改变？",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "26"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "各个公共因子各自的方差贡献率"
+      },
+      {
+        "key": "B",
+        "text": "每个原始变量的共同度"
+      },
+      {
+        "key": "C",
+        "text": "各个公共因子之间的独立性"
+      },
+      {
+        "key": "D",
+        "text": "保留的几个公共因子对原始数据的总累计方差贡献率"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-027",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 27 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "27"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-028",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于主成分分析（PCA），下列说法正确的是（ ）",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "28"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "主要用于分类预测"
+      },
+      {
+        "key": "B",
+        "text": "目的是降维并保留数据主要方差信息"
+      },
+      {
+        "key": "C",
+        "text": "可以直接挖掘变量间因果关系"
+      },
+      {
+        "key": "D",
+        "text": "必须假设存在潜在公共因子"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-029",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 29 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "29"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-sc-030",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "某 APP 收集了用户的“浏览时长、收藏数、下单金额、搜索频率、退款次数、客服咨询次数”等变量。研 究者发现很多变量之间相关性很强，并怀疑背后存在“购买意愿”“售后风险”等不能直接观测的潜在维度。 此时更适合优先考虑：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "30"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "分类分析"
+      },
+      {
+        "key": "B",
+        "text": "因子分析"
+      },
+      {
+        "key": "C",
+        "text": "单纯求每个变量平均数"
+      },
+      {
+        "key": "D",
+        "text": "删除所有相关性高的变量"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-031",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "某研究者对 100 名消费者做聚类分析，变量包括：年消费金额（单位：元）、年购物次数（次）、是否 购买会员（0/1）。结果发现聚类几乎完全由“消费金额”决定。最可能的原因是：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "31"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "聚类方法错误"
+      },
+      {
+        "key": "B",
+        "text": "存在异常值"
+      },
+      {
+        "key": "C",
+        "text": "未进行标准化处理"
+      },
+      {
+        "key": "D",
+        "text": "样本量太小"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-032",
+    "topic": "clustering",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "关于层次聚类中的树状图，以下说法错误的是：",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "32"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "可以反映样本逐步合并过程"
+      },
+      {
+        "key": "B",
+        "text": "可以帮助选择聚类个数"
+      },
+      {
+        "key": "C",
+        "text": "要提前给定类别数量"
+      },
+      {
+        "key": "D",
+        "text": "分支距离越短表示类别越相似"
+      }
+    ]
+  },
+  {
+    "id": "af3-sc-033",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 33 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "选择题",
+      "question": "33"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-fill-001",
+    "topic": "pca_fa",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "主成分分析（PCA）的核心目标是：寻找原始变量的线性组合，使得到的新变量（主成分）的 ________ 最大，并且不同主成分之间互不相关。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-fill-002",
+    "topic": "clustering",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "第三题在 K-means 聚类算法中，算法的目标是最小化各样本点到所属聚类中心的________。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-fill-003",
+    "topic": "clustering",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在聚类建模过程中，如果不同变量的量纲或变化范围差异较大，为避免某些变量对聚类结果产生过大影响， 通常需要先进行 __________；同时，许多聚类方法对 __________ 较为敏感，可能导致聚类方案被扭曲。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-fill-004",
+    "topic": "pca_fa",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在因子分析中，通过______操作可以使每个原始变量尽可能只在一个公共因子上有较高载荷，从而让因子 的解释性更强；而主成分分析不能进行该操作，其根本原因是主成分是原始变量的______ 线性组合，结 果具有唯一性。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-fill-005",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 5 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "5"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-fill-006",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 6 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "6"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-fill-007",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 7 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "7"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-fill-008",
+    "topic": "clustering",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "在 K-Means 聚类算法的迭代过程中，每次将所有样本点分配给距离最近的簇中心后，下一步的核心操作 是：重新计算每个簇内所有样本点的___________，并将其作为该簇新的中心点。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af3-fill-009",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 9 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "9"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af3-fill-010",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 10 题。",
+    "source": {
+      "sourceId": "af3",
+      "page": 1,
+      "section": "填空题",
+      "question": "10"
+    },
+    "sourceTextMissing": true
+  },
+  {
+    "id": "af4-tf-001",
+    "topic": "tree_ensemble",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "随机森林的训练集抽样方式是 bootstrap 抽样, 这是一种无放回随机抽样。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-002",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯算法之所以被称为“朴素”, 是因为它在进行概率计算时, 做出了一个理想化的假 设: 即所有的特征之间都是相互独立的, 不存在任何相关性。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-003",
+    "topic": "tree_ensemble",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "随机森林通过 Bootstrap 重抽样和随机特征选择降低树之间的相关性, 这主要降低了模型的偏 差; 而 XGBoost 通过逐轮迭代拟合残差, 主要降低了模型的方差。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-004",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在政府热线平台案例中, 投诉文本经过中文分词后可以转化为“样本 × 词语”的数值矩阵; 由 于大多数投诉只包含少量词语, 这类矩阵通常包含大量 0, 属于高维稀疏矩阵。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-005",
+    "topic": "tree_ensemble",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "决策树越深，分支越细, 说明模型越复杂, 对训练数据拟合越好, 因此一定能在测试集上取得更 好的预测效果。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-006",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯分类器的“朴素”是指它假设所有特征之间相互独立。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-007",
+    "topic": "clustering",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "高斯混合模型 (GMM) 是判别式模型。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-008",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯分类器的” 属性独立性假设” 是指所有属性之间全局相互独立。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-009",
+    "topic": "tree_ensemble",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "信息增益对可取值数目较多的属性有偏好, 而增益率对可取值数目较少的属性有偏好。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-010",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在 12345 政府热线投诉文本分类中，分词后的数值矩阵行是投诉、列是词语，多数元素为 0， 稀疏矩阵。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-011",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在朴素贝叶斯分类器中, 如果某个特征在训练集的某一类别下从未出现, 则测试时该类别对应 的后验概率一定会变为 0, 无论其他特征如何取值。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "11"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-tf-012",
+    "topic": "naive_bayes",
+    "type": "true_false",
+    "difficulty": "medium",
+    "stem": "在朴素贝叶斯分类器中,“朴素”指的是假设所有特征在给定类别的条件下相互独立。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "判断题",
+      "question": "12"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-sc-001",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "easy",
+    "stem": "关于决策树预剪枝与后剪枝描述错误的是 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "1"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "预剪枝为提前终止某些分支的生长"
+      },
+      {
+        "key": "B",
+        "text": "后剪枝为生成一棵完全树, 再“回头”剪枝"
+      },
+      {
+        "key": "C",
+        "text": "预剪枝更容易引发欠拟合, 后剪枝泛化效果通常更优"
+      },
+      {
+        "key": "D",
+        "text": "后剪枝训练耗时少于预剪枝"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-002",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "下列属于生成式模型的为 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "2"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "决策树"
+      },
+      {
+        "key": "B",
+        "text": "朴素贝叶斯分类器"
+      },
+      {
+        "key": "C",
+        "text": "SVM"
+      },
+      {
+        "key": "D",
+        "text": "逻辑回归"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-003",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "hard",
+    "stem": "关于分类器模型特点说法正确的是 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "3"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "朴素贝叶斯属于判别式，直接建 P (c|x)"
+      },
+      {
+        "key": "B",
+        "text": "决策树属于生成式，建联合 P (x, c)"
+      },
+      {
+        "key": "C",
+        "text": "朴素贝叶斯条件独立假设现实难成立，但文本分类表现优良"
+      },
+      {
+        "key": "D",
+        "text": "随机森林属于 Boosting，串行迭代修正残差"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-004",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "ID3 按信息增益选特征，数据：色泽 0.109、根蒂 0.143、敲声 0.141、纹理 0.381，最优划分？",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "4"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "色泽"
+      },
+      {
+        "key": "B",
+        "text": "根蒂"
+      },
+      {
+        "key": "C",
+        "text": "敲声"
+      },
+      {
+        "key": "D",
+        "text": "纹理"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-005",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "决策树剪枝正确说法 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "5"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "预剪枝在全树生成后修剪"
+      },
+      {
+        "key": "B",
+        "text": "后剪枝生长中提前停止分支"
+      },
+      {
+        "key": "C",
+        "text": "预剪枝在生长时判断泛化收益，无效则停止划分"
+      },
+      {
+        "key": "D",
+        "text": "剪枝只会降低模型效果"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-006",
+    "topic": "uncategorized",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "衡量集合纯度、数值越小纯度越高 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "6"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "信息熵"
+      },
+      {
+        "key": "B",
+        "text": "准确率"
+      },
+      {
+        "key": "C",
+        "text": "精确率"
+      },
+      {
+        "key": "D",
+        "text": "召回率"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-007",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "天生适配高维稀疏文本、训练快、小样本可用 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "7"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "朴素贝叶斯"
+      },
+      {
+        "key": "B",
+        "text": "深度神经网络"
+      },
+      {
+        "key": "C",
+        "text": "SVM"
+      },
+      {
+        "key": "D",
+        "text": "普通线性回归"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-008",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "说法错误 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "8"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "朴素贝叶斯生成式"
+      },
+      {
+        "key": "B",
+        "text": "LR 判别式"
+      },
+      {
+        "key": "C",
+        "text": "高斯核 SVM 生成式"
+      },
+      {
+        "key": "D",
+        "text": "HMM 生成式"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-009",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "自助抽样 OOB 占比 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "9"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "50.0%"
+      },
+      {
+        "key": "B",
+        "text": "36.8%"
+      },
+      {
+        "key": "C",
+        "text": "25.0%"
+      },
+      {
+        "key": "D",
+        "text": "63.2%"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-010",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "随机森林描述不正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "10"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "Bootstrap 有放回采样"
+      },
+      {
+        "key": "B",
+        "text": "样本 + 特征双重随机"
+      },
+      {
+        "key": "C",
+        "text": "OOB 样本无使用价值直接丢弃"
+      },
+      {
+        "key": "D",
+        "text": "OOB 可评估特征重要性"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-011",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "easy",
+    "stem": "预剪枝后剪枝正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "11"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "预剪枝生成全树再剪"
+      },
+      {
+        "key": "B",
+        "text": "后剪枝训练开销大，泛化普遍优于预剪枝"
+      },
+      {
+        "key": "C",
+        "text": "预剪枝易过拟合"
+      },
+      {
+        "key": "D",
+        "text": "后剪枝彻底消除过拟合"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-012",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "XGB 与半朴素贝叶斯错误描述 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "12"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "ODE 每个特征至多依赖一个其他特征"
+      },
+      {
+        "key": "B",
+        "text": "XGB 正则惩罚叶子数与叶权重"
+      },
+      {
+        "key": "C",
+        "text": "XGB 穷举叶子权重寻最优分裂"
+      },
+      {
+        "key": "D",
+        "text": "XGB 学习率、列采样防过拟合"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-013",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "随机森林抗过拟合核心原因 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "13"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "梯度下降全局寻优"
+      },
+      {
+        "key": "B",
+        "text": "样本 + 特征双重随机集成投票"
+      },
+      {
+        "key": "C",
+        "text": "逐棵拟合残差"
+      },
+      {
+        "key": "D",
+        "text": "树深度固定为 1"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-014",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "Bagging 与 Boosting 错误描述 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "14"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "Bagging 并行降方差"
+      },
+      {
+        "key": "B",
+        "text": "Boosting 串行降偏差"
+      },
+      {
+        "key": "C",
+        "text": "OOB 约 36.8%"
+      },
+      {
+        "key": "D",
+        "text": "随机森林仅样本随机、特征全取"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-015",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "决策树划分与剪枝正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "15"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "C4.5 无条件选增益率最大特征"
+      },
+      {
+        "key": "B",
+        "text": "CART 选基尼指数最大特征"
+      },
+      {
+        "key": "C",
+        "text": "预剪枝无效则停止划分、节省训练时间"
+      },
+      {
+        "key": "D",
+        "text": "后剪枝预测耗时大于未剪枝树"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-016",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "12345 热线朴素贝叶斯说法正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "16"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "效果好因为特征满足独立假设"
+      },
+      {
+        "key": "B",
+        "text": "原始词频直接入 naiveBayes 会被拟合成正态、效果极差"
+      },
+      {
+        "key": "C",
+        "text": "拉普拉斯平滑一定提升准确率"
+      },
+      {
+        "key": "D",
+        "text": "词频二值化目的降维度"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-017",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "剪枝错误描述 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "17"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "全树训练 100%、验证 42.9% 典型过拟合"
+      },
+      {
+        "key": "B",
+        "text": "预剪枝权衡偏差方差"
+      },
+      {
+        "key": "C",
+        "text": "后剪枝泛化优于预剪枝"
+      },
+      {
+        "key": "D",
+        "text": "验证集比例越大泛化一定越好"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-018",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "四种算法正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "18"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "准确率高代表算法全局最优"
+      },
+      {
+        "key": "B",
+        "text": "随机森林双重随机降低偏差"
+      },
+      {
+        "key": "C",
+        "text": "XGB 正则惩罚叶子数量与叶权重"
+      },
+      {
+        "key": "D",
+        "text": "随机森林可解释性优于单决策树"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-019",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯零概率解决方案 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "19"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "加样本"
+      },
+      {
+        "key": "B",
+        "text": "删属性"
+      },
+      {
+        "key": "C",
+        "text": "拉普拉斯修正"
+      },
+      {
+        "key": "D",
+        "text": "交叉验证"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-020",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "热线文本朴素贝叶斯正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "20"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "独立假设不成立因此不能用文本分类"
+      },
+      {
+        "key": "B",
+        "text": "零概率可用拉普拉斯修正"
+      },
+      {
+        "key": "C",
+        "text": "朴素贝叶斯判别式模型"
+      },
+      {
+        "key": "D",
+        "text": "词频直接连续输入无负面影响"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-021",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "拉普拉斯修正作用 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "21"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "提升准确率"
+      },
+      {
+        "key": "B",
+        "text": "统一全部概率"
+      },
+      {
+        "key": "C",
+        "text": "规避零概率失效"
+      },
+      {
+        "key": "D",
+        "text": "连续离散转换"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-022",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "ODE 独依赖估计定义 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "22"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "全部特征两两依赖"
+      },
+      {
+        "key": "B",
+        "text": "每个特征除类别至多依赖一个特征"
+      },
+      {
+        "key": "C",
+        "text": "忽略离散属性"
+      },
+      {
+        "key": "D",
+        "text": "全特征互相依赖"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-023",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "ID3 选特征依据 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "23"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "信息增益最大"
+      },
+      {
+        "key": "B",
+        "text": "熵最大"
+      },
+      {
+        "key": "C",
+        "text": "基尼最大"
+      },
+      {
+        "key": "D",
+        "text": "属性最少"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-024",
+    "topic": "pca_fa",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "热线词频朴素贝叶斯合理处理 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "24"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "直接当作正态连续"
+      },
+      {
+        "key": "B",
+        "text": "词频转为 0/1 二值因子"
+      },
+      {
+        "key": "C",
+        "text": "文本不能用朴素贝叶斯"
+      },
+      {
+        "key": "D",
+        "text": "词频越大越准"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-025",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "easy",
+    "stem": "增益描述正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "25"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "增益偏好多取值，增益率也偏好多取值"
+      },
+      {
+        "key": "B",
+        "text": "增益偏好少取值"
+      },
+      {
+        "key": "C",
+        "text": "增益偏多、增益率易偏少"
+      },
+      {
+        "key": "D",
+        "text": "二者等价"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-026",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "ROC 绘制正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "26"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "固定阈值描单点"
+      },
+      {
+        "key": "B",
+        "text": "类别概率做阈值遍历画曲线"
+      },
+      {
+        "key": "C",
+        "text": "朴素贝叶斯不能输出概率"
+      },
+      {
+        "key": "D",
+        "text": "多分类无法 ROC"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-027",
+    "topic": "naive_bayes",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "TAN 树增强朴素贝叶斯正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "27"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "全特征依赖同一超父"
+      },
+      {
+        "key": "B",
+        "text": "最大带权生成树构造依赖"
+      },
+      {
+        "key": "C",
+        "text": "复杂度低于朴素贝叶斯"
+      },
+      {
+        "key": "D",
+        "text": "无特征依赖"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-028",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "树与集成学习正确 （ ）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "28"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "熵越大纯度越高"
+      },
+      {
+        "key": "B",
+        "text": "随机森林只样本随机"
+      },
+      {
+        "key": "C",
+        "text": "Bagging 并行、Boosting 串行"
+      },
+      {
+        "key": "D",
+        "text": "XGB 无正则"
+      }
+    ]
+  },
+  {
+    "id": "af4-sc-029",
+    "topic": "tree_ensemble",
+    "type": "single_choice",
+    "difficulty": "medium",
+    "stem": "信息增益公式选择题",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "单项选择题",
+      "question": "29"
+    },
+    "sourceTextMissing": false,
+    "options": [
+      {
+        "key": "A",
+        "text": "H(D) − 12 H(D1 ) − 12 H(D2 )"
+      },
+      {
+        "key": "B",
+        "text": "H(D) − 10 H(D1 ) − 10 H(D2 )"
+      },
+      {
+        "key": "C",
+        "text": "H(D1 ) + H(D2 ) − H(D)"
+      },
+      {
+        "key": "D",
+        "text": "10 5 H(D1 ) + 10 H(D2 ) − H(D)"
+      }
+    ]
+  },
+  {
+    "id": "af4-fill-001",
+    "topic": "naive_bayes",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯“朴素”：给定类别，特征 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-002",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "CART 分类树最小化 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-003",
+    "topic": "naive_bayes",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "朴素贝叶斯基本假设： 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "3"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-004",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "ID3： ；C4.5： ；CART： ；随机森林二重随机： 、 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "4"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-005",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "Bootstrap 极限不采样占比： %；XGB 正则 Ω(f ) = γT + 12 λ∥w∥2 ：T = ，w= 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "5"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-006",
+    "topic": "naive_bayes",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "Bagging 基学习器 ；Boosting ；拉普拉斯假设特征类别 分布，引入 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "6"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-007",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "零概率用 修正；Bagging 采用 抽样；树全生成后自底向上剪枝： ；召回 率：正例预测正确占比。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "7"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-008",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "ID3：信息增益，C4.5 增益率，CART 基尼指数；预剪枝生长中停止，后剪枝全树再修剪。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "8"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-009",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "随机森林 并行；XGBoost 串行，逐轮拟合 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "9"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-010",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "D = 10, N = 3, c = 4，漏水在 c 下出现 0 次，特征取值 Ni = 2 • P̂ (c) = • P̂ (x = 1|c) =",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "10"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-011",
+    "topic": "tree_ensemble",
+    "type": "fill",
+    "difficulty": "easy",
+    "stem": "剪枝提前终止分支，易 ； 剪枝全树再修剪；验证集采用 法。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "11"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-012",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "Ent(D) = 0.971，D1 (6) : Ent = 0.650, D2 (4) : Ent = 0.811，Gain = 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "12"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-013",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "生长中提前停止： ；全树生成再修剪： 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "13"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-014",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "RF 双重随机： 、 ；无验证集评估： 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "14"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-fill-015",
+    "topic": "uncategorized",
+    "type": "fill",
+    "difficulty": "medium",
+    "stem": "P (y = 1|x1 , x2 ) ∝ 。",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "填空题",
+      "question": "15"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-open-001",
+    "topic": "tree_ensemble",
+    "type": "open",
+    "difficulty": "medium",
+    "stem": "随机森林优缺点（各两点）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "简答/综合应用题",
+      "question": "1"
+    },
+    "sourceTextMissing": false
+  },
+  {
+    "id": "af4-open-002",
+    "topic": "tree_ensemble",
+    "type": "open",
+    "difficulty": "medium",
+    "stem": "假设你正在为某市的“12345 政府热线“开发一个预测模型，任务是根据工单的结构化属性， 例如：来电时间、诉求分类、紧急程度、区域代码等，对该工单的处理时长进行预测。团队目 前在使用基于决策树的模型（如 XGBoost、LightGBM 等集成树）以及使用神经网络中产生 分歧。请从以下三个维度对比两者，并给出你的首选推荐以及理由： �1. 计算资源与训练速度 �2. 对异常值的鲁棒性 �3. 向非技术领导汇报时的沟通成本（模型可解释性）",
+    "source": {
+      "sourceId": "af4",
+      "page": 1,
+      "section": "简答/综合应用题",
+      "question": "2"
+    },
+    "sourceTextMissing": false
+  }
+]

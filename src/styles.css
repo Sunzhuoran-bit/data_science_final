@@ -366,6 +366,11 @@ textarea {
   border: 1px solid #efbcbc;
 }
 
+.result.pending {
+  background: var(--amber-soft);
+  border: 1px solid #e7c391;
+}
+
 .result p {
   margin: 8px 0 0;
   line-height: 1.55;

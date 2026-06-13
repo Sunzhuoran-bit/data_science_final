@@ -1,0 +1,252 @@
+{
+  "total": 204,
+  "bySourceAndSection": {
+    "af1": {
+      "判断题": 14,
+      "选择题": 14,
+      "填空题": 10
+    },
+    "af2": {
+      "判断题": 23,
+      "单项选择题": 8,
+      "填空题": 11
+    },
+    "af3": {
+      "判断题": 23,
+      "选择题": 33,
+      "填空题": 10
+    },
+    "af4": {
+      "判断题": 12,
+      "单项选择题": 29,
+      "填空题": 15,
+      "简答/综合应用题": 2
+    }
+  },
+  "sourceTextMissing": [
+    {
+      "id": "af1-tf-006",
+      "topic": "uncategorized",
+      "type": "true_false",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 6 题。",
+      "source": {
+        "sourceId": "af1",
+        "page": 1,
+        "section": "判断题",
+        "question": "6"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af1-tf-008",
+      "topic": "uncategorized",
+      "type": "true_false",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 8 题。",
+      "source": {
+        "sourceId": "af1",
+        "page": 1,
+        "section": "判断题",
+        "question": "8"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af1-tf-011",
+      "topic": "uncategorized",
+      "type": "true_false",
+      "difficulty": "easy",
+      "stem": "原 PDF 文本提取为空，请查看 af1 的“判断题”第 11 题。",
+      "source": {
+        "sourceId": "af1",
+        "page": 1,
+        "section": "判断题",
+        "question": "11"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af1-fill-008",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af1 的“填空题”第 8 题。",
+      "source": {
+        "sourceId": "af1",
+        "page": 1,
+        "section": "填空题",
+        "question": "8"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-tf-023",
+      "topic": "uncategorized",
+      "type": "true_false",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“判断题”第 23 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "判断题",
+        "question": "23"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-015",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "hard",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 15 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "15"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-019",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 19 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "19"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-023",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 23 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "23"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-027",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 27 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "27"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-029",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 29 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "29"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-sc-033",
+      "topic": "uncategorized",
+      "type": "single_choice",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“选择题”第 33 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "选择题",
+        "question": "33"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-fill-005",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 5 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "填空题",
+        "question": "5"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-fill-006",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 6 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "填空题",
+        "question": "6"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-fill-007",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 7 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "填空题",
+        "question": "7"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-fill-009",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 9 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "填空题",
+        "question": "9"
+      },
+      "sourceTextMissing": true
+    },
+    {
+      "id": "af3-fill-010",
+      "topic": "uncategorized",
+      "type": "fill",
+      "difficulty": "medium",
+      "stem": "原 PDF 文本提取为空，请查看 af3 的“填空题”第 10 题。",
+      "source": {
+        "sourceId": "af3",
+        "page": 1,
+        "section": "填空题",
+        "question": "10"
+      },
+      "sourceTextMissing": true
+    }
+  ]
+}

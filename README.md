@@ -2,7 +2,8 @@
 
 期末复习项目，包含：
 
-- 按知识点整理的学案：`docs/study_guide.md`
+- 按知识点整理的讲义式学案：`docs/study_guides/data_science_final_study_workbook.docx`
+- PDF 题号覆盖审计：`docs/question_coverage.md`
 - 可交互网页端题库：`index.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
 - 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`
@@ -22,11 +23,12 @@ http://localhost:4173
 ## Features
 
 - 按知识点练习判断、选择、填空、开放题。
-- 当前内置 120 道可追溯题目。
+- 当前覆盖 4 个作业反馈 PDF 的 204 个唯一题号。
 - 每题显示原始 PDF、页码、题型和题号。
 - 答错后自动进入错题板块。
 - 支持收藏题目。
 - 保存本人作答次数、正确率、错题和每次预测卷记录。
+- PDF 文本缺失或标准答案未核对的题号会保留在题库中并标注“待核对”，不参与预测卷自动评分。
 - 期末预测卷按图片中的题型结构与重点，从 PDF 原题中抽取。
 
 ## Data Policy
@@ -46,7 +48,9 @@ http://localhost:4173
 │   ├── question_bank.js  # base source-bound question bank
 │   └── supplemental_questions.js
 ├── docs/
-│   └── study_guide.md
+│   ├── question_coverage.md
+│   ├── study_guide.md
+│   └── study_guides/
 ├── src/
 │   ├── app.js
 │   └── styles.css

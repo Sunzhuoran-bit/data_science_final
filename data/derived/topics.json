@@ -1,0 +1,57 @@
+[
+  {
+    "id": "linear_diagnostics",
+    "name": "线性回归诊断与误差假设",
+    "group": "回归分析"
+  },
+  {
+    "id": "model_selection",
+    "name": "模型评价、AIC/BIC 与显著性检验",
+    "group": "回归分析"
+  },
+  {
+    "id": "log_linear_house",
+    "name": "对数线性模型、交互项与二手房案例",
+    "group": "回归分析"
+  },
+  {
+    "id": "anova",
+    "name": "方差分析与方差分解",
+    "group": "统计建模"
+  },
+  {
+    "id": "logistic_roc",
+    "name": "逻辑回归、ROC/AUC 与混淆矩阵",
+    "group": "统计建模"
+  },
+  {
+    "id": "survival_ordinal_count",
+    "name": "生存分析、定序回归与计数模型",
+    "group": "统计建模"
+  },
+  {
+    "id": "pca_fa",
+    "name": "主成分分析与因子分析",
+    "group": "无监督学习"
+  },
+  {
+    "id": "clustering",
+    "name": "K-means、层次聚类与 GMM 联系",
+    "group": "无监督学习"
+  },
+  {
+    "id": "naive_bayes",
+    "name": "朴素贝叶斯与文本分类",
+    "group": "机器学习"
+  },
+  {
+    "id": "tree_ensemble",
+    "name": "决策树、随机森林与 XGBoost",
+    "group": "机器学习"
+  },
+  {
+    "id": "uncategorized",
+    "name": "未归类题号",
+    "group": "待核对"
+  }
+]

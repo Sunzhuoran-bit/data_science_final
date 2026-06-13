@@ -253,11 +253,17 @@
       `;
     }
     if (question.type === "single_choice") {
+      if (!Array.isArray(question.options) || !question.options.length) {
+        return `<textarea name="${name}" rows="4" placeholder="该选择题的选项未能从 PDF 文本中提取，请查看原 PDF 后作答"></textarea>`;
+      }
       return `<div class="option-stack">${question.options
         .map((option) => `<label><input type="radio" name="${name}" value="${option.key}" /> <strong>${option.key}</strong>. ${escapeHtml(option.text)}</label>`)
         .join("")}</div>`;
     }
     if (question.type === "multiple_choice") {
+      if (!Array.isArray(question.options) || !question.options.length) {
+        return `<textarea name="${name}" rows="4" placeholder="该多选题的选项未能从 PDF 文本中提取，请查看原 PDF 后作答"></textarea>`;
+      }
       return `<div class="option-stack">${question.options
         .map((option) => `<label><input type="checkbox" name="${name}" value="${option.key}" /> <strong>${option.key}</strong>. ${escapeHtml(option.text)}</label>`)
         .join("")}</div>`;
@@ -271,8 +277,9 @@
   function renderLastResult(question) {
     const result = viewState.lastResult;
     if (!result || result.questionId !== question.id) return "";
+    const resultClass = result.pending ? "pending" : result.correct ? "correct" : "wrong";
     return `
-      <div class="result ${result.correct ? "correct" : "wrong"}">
+      <div class="result ${resultClass}">
         <p><strong>参考答案：</strong>${formatAnswer(question)}</p>
         <p>${escapeHtml(question.explanation || "")}</p>
       </div>
@@ -322,9 +329,11 @@
         const question = questions.find((item) => item.id === submit.dataset.submitPractice);
         const userAnswer = readAnswer(question, "practice");
         const correct = checkAnswer(question, userAnswer);
-        recordAttempt(question.id, correct);
-        if (!correct && !state.mistakes.includes(question.id)) state.mistakes.push(question.id);
-        viewState.lastResult = { questionId: question.id, correct };
+        if (correct !== null) {
+          recordAttempt(question.id, correct);
+          if (!correct && !state.mistakes.includes(question.id)) state.mistakes.push(question.id);
+        }
+        viewState.lastResult = { questionId: question.id, correct, pending: correct === null };
         saveState();
         render();
       });
@@ -352,6 +361,7 @@
   }
 
   function checkAnswer(question, userAnswer) {
+    if (question.answerPending) return null;
     if (question.type === "true_false") return String(question.answer) === String(userAnswer);
     if (question.type === "single_choice") return question.answer === userAnswer;
     if (question.type === "multiple_choice") {
@@ -408,7 +418,7 @@
   }
 
   function buildExam() {
-    const finalQuestions = questions.filter((question) => question.finalExam);
+    const finalQuestions = questions.filter((question) => question.finalExam && !question.answerPending);
     const used = new Set();
     const select = (types, count) => {
       const typeList = Array.isArray(types) ? types : [types];
@@ -592,6 +602,9 @@
   }
 
   function formatAnswer(question) {
+    if (question.answerPending) {
+      return question.sourceTextMissing ? "待核对（PDF 文本提取为空，请查看原 PDF 对应题号）" : "待核对（原 PDF 未提供可机读标准答案）";
+    }
     if (question.type === "true_false") return question.answer ? "正确" : "错误";
     if (question.type === "multiple_choice") return question.answer.join("、");
     if (question.type === "single_choice") return question.answer;
