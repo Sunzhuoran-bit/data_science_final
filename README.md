@@ -5,7 +5,7 @@
 - 按知识点整理的学案：`docs/study_guide.md`
 - 可交互网页端题库：`index.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
-- 题库数据与溯源字段：`data/question_bank.js`
+- 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`
 
 ## Run
 
@@ -22,6 +22,7 @@ http://localhost:4173
 ## Features
 
 - 按知识点练习判断、选择、填空、开放题。
+- 当前内置 120 道可追溯题目。
 - 每题显示原始 PDF、页码、题型和题号。
 - 答错后自动进入错题板块。
 - 支持收藏题目。
@@ -42,7 +43,8 @@ http://localhost:4173
 │   ├── raw/              # original PDFs and image, renamed in English
 │   ├── extracted/        # UTF-8 text extracted from PDFs
 │   ├── derived/          # rendered pages used for visual checks
-│   └── question_bank.js  # source-bound question bank
+│   ├── question_bank.js  # base source-bound question bank
+│   └── supplemental_questions.js
 ├── docs/
 │   └── study_guide.md
 ├── src/

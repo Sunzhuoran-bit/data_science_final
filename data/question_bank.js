@@ -50,7 +50,19 @@ window.EXAM_REQUIREMENTS = {
     choice: 7,
     fill: 10,
     open: 4
-  }
+  },
+  topicPriority: [
+    "pca_fa",
+    "clustering",
+    "linear_diagnostics",
+    "model_selection",
+    "log_linear_house",
+    "tree_ensemble",
+    "naive_bayes",
+    "logistic_roc",
+    "anova",
+    "survival_ordinal_count"
+  ]
 };
 
 window.TOPICS = [

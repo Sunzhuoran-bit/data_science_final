@@ -408,14 +408,48 @@
 
   function buildExam() {
     const finalQuestions = questions.filter((question) => question.finalExam);
-    const take = (type, count) => finalQuestions.filter((question) => question.type === type).slice(0, count);
-    const choices = finalQuestions.filter((question) => question.type === "single_choice" || question.type === "multiple_choice").slice(0, window.EXAM_REQUIREMENTS.finalPaperShape.choice);
+    const used = new Set();
+    const select = (types, count) => {
+      const typeList = Array.isArray(types) ? types : [types];
+      const candidates = finalQuestions.filter((question) => typeList.includes(question.type) && !used.has(question.id));
+      const selected = selectBalanced(candidates, count);
+      selected.forEach((question) => used.add(question.id));
+      return selected;
+    };
     return [
-      ...take("true_false", window.EXAM_REQUIREMENTS.finalPaperShape.trueFalse),
-      ...choices,
-      ...take("fill", window.EXAM_REQUIREMENTS.finalPaperShape.fill),
-      ...take("open", window.EXAM_REQUIREMENTS.finalPaperShape.open)
+      ...select("true_false", window.EXAM_REQUIREMENTS.finalPaperShape.trueFalse),
+      ...select(["single_choice", "multiple_choice"], window.EXAM_REQUIREMENTS.finalPaperShape.choice),
+      ...select("fill", window.EXAM_REQUIREMENTS.finalPaperShape.fill),
+      ...select("open", window.EXAM_REQUIREMENTS.finalPaperShape.open)
     ];
+  }
+
+  function selectBalanced(candidates, count) {
+    const priority = window.EXAM_REQUIREMENTS.topicPriority || topics.map((topic) => topic.id);
+    const buckets = new Map();
+    candidates.forEach((question) => {
+      if (!buckets.has(question.topic)) buckets.set(question.topic, []);
+      buckets.get(question.topic).push(question);
+    });
+    const orderedTopics = [
+      ...priority.filter((topic) => buckets.has(topic)),
+      ...Array.from(buckets.keys()).filter((topic) => !priority.includes(topic))
+    ];
+    const selected = [];
+    while (selected.length < count) {
+      let changed = false;
+      for (const topic of orderedTopics) {
+        const bucket = buckets.get(topic) || [];
+        const next = bucket.shift();
+        if (next) {
+          selected.push(next);
+          changed = true;
+          if (selected.length === count) break;
+        }
+      }
+      if (!changed) break;
+    }
+    return selected;
   }
 
   function renderExamQuestion(question, index) {
