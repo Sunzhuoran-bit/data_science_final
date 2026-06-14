@@ -25,6 +25,42 @@
     examResult: null
   };
 
+  const routeTabs = new Set(["home", "practice", "mistakes", "favorites", "exam", "history", "sources"]);
+
+  function applyRouteFromLocation() {
+    const parts = decodeURIComponent(window.location.hash.replace(/^#/, "")).split("/").filter(Boolean);
+    const tab = routeTabs.has(parts[0]) ? parts[0] : "home";
+    viewState.tab = tab;
+    viewState.questionIndex = 0;
+    viewState.lastResult = null;
+    viewState.examResult = null;
+    if (tab === "practice") {
+      const topic = parts[1] && (parts[1] === "all" || topics.some((item) => item.id === parts[1])) ? parts[1] : "all";
+      viewState.topic = topic;
+      viewState.practiceStage = parts[1] ? "questions" : "topics";
+    } else {
+      viewState.topic = "all";
+      viewState.practiceStage = "topics";
+    }
+  }
+
+  function currentRouteHash() {
+    if (viewState.tab === "practice" && viewState.practiceStage === "questions") {
+      return `#practice/${encodeURIComponent(viewState.topic)}`;
+    }
+    return `#${viewState.tab}`;
+  }
+
+  function writeRoute(replace = false) {
+    const hash = currentRouteHash();
+    if (window.location.hash === hash) return;
+    try {
+      window.history[replace ? "replaceState" : "pushState"]({}, "", hash);
+    } catch {
+      window.location.hash = hash;
+    }
+  }
+
   function loadState() {
     try {
       const parsed = JSON.parse(localStorage.getItem(storageKey));
@@ -80,7 +116,7 @@
 
   function render() {
     app.innerHTML = `
-      <div class="app-shell">
+      <div class="app-shell view-${viewState.tab}">
         <header class="app-header">
           <button class="brand" data-tab="home">
             <div class="brand-mark" aria-hidden="true">
@@ -89,7 +125,6 @@
             </div>
             <div>
               <h1>Final Review</h1>
-              <p>source-bound practice</p>
             </div>
           </button>
           <nav class="top-nav" aria-label="主导航">
@@ -116,6 +151,7 @@
         viewState.examResult = null;
         viewState.practiceStage = viewState.tab === "practice" ? "topics" : "questions";
         if (viewState.tab !== "practice") viewState.topic = "all";
+        writeRoute();
         render();
       });
     });
@@ -126,6 +162,7 @@
         viewState.questionIndex = 0;
         viewState.lastResult = null;
         viewState.practiceStage = "questions";
+        writeRoute(true);
         render();
       });
     });
@@ -135,6 +172,7 @@
       backTopics.addEventListener("click", () => {
         viewState.practiceStage = "topics";
         viewState.lastResult = null;
+        writeRoute(true);
         render();
       });
     }
@@ -161,7 +199,7 @@
       <header class="topbar">
         <div>
           <h2>${currentTitle()}</h2>
-          <p>${currentSubtitle()}</p>
+          ${currentSubtitle() ? `<p>${currentSubtitle()}</p>` : ""}
         </div>
         <div class="metrics">
           <div><span>${questions.length}</span><label>题目</label></div>
@@ -188,9 +226,7 @@
 
   function currentSubtitle() {
     if (viewState.tab === "exam") return "按图片中的题型比例与重点权重，从 PDF 原题中抽取。";
-    if (viewState.tab === "sources") return "所有题目均绑定原始 PDF、页码、题型与题号。";
-    if (viewState.tab === "practice" && viewState.practiceStage === "topics") return "先选择知识点，再进入对应题组。";
-    return viewState.topic === "all" ? "当前显示全部知识点。" : topicName(viewState.topic);
+    return "";
   }
 
   function renderMainPanel() {
@@ -209,32 +245,29 @@
     return `
       <section class="home-panel">
         <div class="hero-copy">
-          <span>204 道 PDF 原题 · 本地记录</span>
-          <h2>按知识点刷题，按错题回收。</h2>
-          <p>首页只保留入口，进入练习后先选知识点，再进入题组答题。</p>
+          <h2>Final Review</h2>
         </div>
         <div class="home-stats">
-          <div><strong>${questions.length}</strong><span>题号覆盖</span></div>
+          <div><strong>${questions.length}</strong><span>总题数</span></div>
           <div><strong>${state.mistakes.length}</strong><span>错题</span></div>
           <div><strong>${state.favorites.length}</strong><span>收藏</span></div>
           <div><strong>${personalRate}</strong><span>本人正确率</span></div>
         </div>
       </section>
       <section class="quick-routes">
-        ${homeRoute("practice", "开始练习", "选择知识点后进入题组")}
-        ${homeRoute("mistakes", "错题回收", "只看答错过的题")}
-        ${homeRoute("favorites", "收藏夹", "复做标记题")}
-        ${homeRoute("exam", "预测卷", "打散考点综合测试")}
-        ${homeRoute("history", "训练记录", "查看历次得分")}
-        ${homeRoute("sources", "PDF 来源", "核对原始出处")}
+        ${homeRoute("practice", "开始练习")}
+        ${homeRoute("mistakes", "错题回收")}
+        ${homeRoute("favorites", "收藏夹")}
+        ${homeRoute("exam", "预测卷")}
+        ${homeRoute("history", "训练记录")}
+        ${homeRoute("sources", "PDF 来源")}
       </section>
     `;
   }
 
-  function homeRoute(tab, title, caption) {
+  function homeRoute(tab, title) {
     return `<button class="route-card" data-tab="${tab}">
       <strong>${title}</strong>
-      <span>${caption}</span>
     </button>`;
   }
 
@@ -250,7 +283,6 @@
       <section class="topic-select">
         <div class="section-lead">
           <h3>选择知识点</h3>
-          <p>进入后可用数字题号快速跳题，一行显示多个题号。</p>
         </div>
         <div class="topic-grid">
           ${topicCards
@@ -729,5 +761,11 @@
       .replace(/"/g, "&quot;");
   }
 
+  applyRouteFromLocation();
+  writeRoute(!window.location.hash);
+  window.addEventListener("popstate", () => {
+    applyRouteFromLocation();
+    render();
+  });
   render();
 })();
