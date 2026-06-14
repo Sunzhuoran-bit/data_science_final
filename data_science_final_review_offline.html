@@ -6,7 +6,7 @@
     <title>Data Science Final Review Offline</title>
     <style>
 :root {
-  --bg: #f5f6f3;
+  --bg: #f4f7f4;
   --panel: #ffffff;
   --panel-2: #eef2ef;
   --text: #1d2520;
@@ -14,6 +14,8 @@
   --line: #d8ded9;
   --green: #1f7a4d;
   --green-soft: #e6f2eb;
+  --blue: #3157d5;
+  --blue-soft: #e8edff;
   --amber: #a85d18;
   --amber-soft: #fff0df;
   --red: #a33a3a;
@@ -28,7 +30,10 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(90deg, rgba(29, 37, 32, 0.035) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(180deg, rgba(29, 37, 32, 0.025) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--bg);
   color: var(--text);
 }
 
@@ -51,25 +56,33 @@ button:hover {
   border-color: var(--green);
 }
 
-.shell {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+.app-shell {
   min-height: 100vh;
 }
 
-.sidebar {
-  border-right: 1px solid var(--line);
-  background: #fbfbf8;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) minmax(520px, 760px);
   gap: 18px;
+  align-items: center;
+  padding: 16px 28px;
+  border-bottom: 1px solid rgba(216, 222, 217, 0.9);
+  background: rgba(251, 252, 248, 0.94);
+  backdrop-filter: blur(12px);
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
 }
 
 .brand-mark {
@@ -144,6 +157,7 @@ button:hover {
   color: var(--muted);
 }
 
+.top-nav,
 .nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -152,10 +166,20 @@ button:hover {
 
 .nav-button.active,
 .topic-button.active,
-.question-list button.active {
+.question-list button.active,
+.question-map button.active {
   background: var(--green);
   color: #fff;
   border-color: var(--green);
+}
+
+.top-nav {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.top-nav .nav-button {
+  background: #fbfcf8;
+  font-weight: 700;
 }
 
 .topic-list {
@@ -192,7 +216,9 @@ button:hover {
 }
 
 .main {
-  padding: 24px;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
   min-width: 0;
 }
 
@@ -250,26 +276,35 @@ button:hover {
 
 .practice-layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 308px minmax(0, 1fr);
   gap: 16px;
+  align-items: start;
 }
 
-.question-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: calc(100vh - 150px);
+.question-map {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  gap: 6px;
+  max-height: calc(100vh - 126px);
   overflow: auto;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
-.question-list button {
-  text-align: left;
-  padding: 10px;
-  font-size: 16px;
+.question-map button {
+  min-height: 34px;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
-.question-list span {
+.question-map span {
   display: block;
 }
 
@@ -293,6 +328,21 @@ button:hover {
   background: var(--panel-2);
   border-radius: 999px;
   padding: 3px 9px;
+}
+
+.question-meta .difficulty-easy {
+  color: #17613d;
+  background: var(--green-soft);
+}
+
+.question-meta .difficulty-medium {
+  color: #805016;
+  background: var(--amber-soft);
+}
+
+.question-meta .difficulty-hard {
+  color: #8f2f2f;
+  background: var(--red-soft);
 }
 
 h3 {
@@ -516,39 +566,243 @@ summary {
   color: var(--muted);
 }
 
+.home-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 24px;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid #1e3a30;
+  border-radius: 8px;
+  background: #17231f;
+  color: #f7faf7;
+}
+
+.home-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto 30px 22px 30px;
+  height: 34px;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0 2px, transparent 2px 19px),
+    linear-gradient(90deg, rgba(49, 87, 213, 0.32), rgba(242, 182, 109, 0.28));
+  opacity: 0.55;
+}
+
+.hero-copy,
+.home-stats {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #bcd9c7;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-copy h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.hero-copy p {
+  max-width: 560px;
+  margin: 16px 0 0;
+  color: #d8e3dc;
+  line-height: 1.7;
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-content: start;
+}
+
+.home-stats div {
+  min-height: 86px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-stats strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.home-stats span {
+  display: block;
+  margin-top: 8px;
+  color: #cbd8d0;
+  font-size: 13px;
+}
+
+.quick-routes {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.route-card {
+  min-height: 96px;
+  padding: 14px;
+  text-align: left;
+  background: #fbfcf8;
+}
+
+.route-card strong,
+.route-card span {
+  display: block;
+}
+
+.route-card strong {
+  font-size: 17px;
+}
+
+.route-card span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.section-lead {
+  margin-bottom: 14px;
+}
+
+.section-lead h3,
+.section-lead p {
+  margin: 0;
+}
+
+.section-lead h3 {
+  font-size: 24px;
+}
+
+.section-lead p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.topic-card {
+  min-height: 132px;
+  padding: 16px;
+  text-align: left;
+  background: #fbfcf8;
+}
+
+.topic-card span,
+.topic-card strong,
+.topic-card em {
+  display: block;
+}
+
+.topic-card span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.topic-card strong {
+  margin-top: 10px;
+  min-height: 44px;
+  line-height: 1.35;
+}
+
+.topic-card em {
+  margin-top: 12px;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.topic-card.active {
+  border-color: var(--green);
+  box-shadow: inset 4px 0 0 var(--green);
+}
+
+.practice-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.practice-toolbar span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 @media (max-width: 980px) {
-  .shell,
+  .app-header,
+  .home-panel,
   .practice-layout {
     grid-template-columns: 1fr;
   }
 
-  .sidebar {
+  .app-header {
     position: static;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+    padding: 14px;
   }
 
-  .topic-list {
-    max-height: none;
+  .top-nav,
+  .quick-routes {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .topbar {
     align-items: stretch;
     flex-direction: column;
   }
+
+  .question-map {
+    position: static;
+    max-height: 176px;
+    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  }
 }
 
 @media (max-width: 620px) {
-  .main,
-  .sidebar {
-    padding: 14px;
+  .main {
+    width: calc(100% - 24px);
+    padding: 16px 0 28px;
   }
 
-  .nav,
+  .top-nav,
   .metrics,
   .stats-row,
   .answer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .quick-routes,
+  .home-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-panel {
+    padding: 22px;
+  }
+
+  .hero-copy h2 {
+    font-size: 30px;
   }
 
   .topbar h2 {
@@ -558,6 +812,18 @@ summary {
   .exam-banner {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .question-panel,
+  .exam-question,
+  .exam-result,
+  .source-panel,
+  .empty-state {
+    padding: 14px;
+  }
+
+  h3 {
+    font-size: 19px;
   }
 }
 
@@ -4464,11 +4730,13 @@ window.QUESTION_BANK.push(
   const state = loadState();
   const topics = window.TOPICS || [];
   const questions = window.QUESTION_BANK || [];
+  const questionNumbers = new Map(questions.map((question, index) => [question.id, index + 1]));
 
   const viewState = {
-    tab: "practice",
+    tab: "home",
     topic: "all",
     questionIndex: 0,
+    practiceStage: "topics",
     lastResult: null,
     examAnswers: {},
     examResult: null
@@ -4529,9 +4797,9 @@ window.QUESTION_BANK.push(
 
   function render() {
     app.innerHTML = `
-      <div class="shell">
-        <aside class="sidebar">
-          <div class="brand">
+      <div class="app-shell">
+        <header class="app-header">
+          <button class="brand" data-tab="home">
             <div class="brand-mark" aria-hidden="true">
               <span class="logo-bars"><i></i><i></i><i></i></span>
               <span class="logo-dot"></span>
@@ -4540,8 +4808,8 @@ window.QUESTION_BANK.push(
               <h1>Final Review</h1>
               <p>source-bound practice</p>
             </div>
-          </div>
-          <nav class="nav">
+          </button>
+          <nav class="top-nav" aria-label="主导航">
             ${tabButton("practice", "练习")}
             ${tabButton("mistakes", "错题")}
             ${tabButton("favorites", "收藏")}
@@ -4549,15 +4817,9 @@ window.QUESTION_BANK.push(
             ${tabButton("history", "记录")}
             ${tabButton("sources", "来源")}
           </nav>
-          <div class="topic-list">
-            ${topicButton("all", "全部知识点", questions.length)}
-            ${topics
-              .map((topic) => topicButton(topic.id, topic.name, questions.filter((question) => question.topic === topic.id).length))
-              .join("")}
-          </div>
-        </aside>
+        </header>
         <main class="main">
-          ${renderHeader()}
+          ${viewState.tab === "home" ? "" : renderHeader()}
           ${renderMainPanel()}
         </main>
       </div>
@@ -4569,6 +4831,8 @@ window.QUESTION_BANK.push(
         viewState.questionIndex = 0;
         viewState.lastResult = null;
         viewState.examResult = null;
+        viewState.practiceStage = viewState.tab === "practice" ? "topics" : "questions";
+        if (viewState.tab !== "practice") viewState.topic = "all";
         render();
       });
     });
@@ -4578,9 +4842,19 @@ window.QUESTION_BANK.push(
         viewState.topic = button.dataset.topic;
         viewState.questionIndex = 0;
         viewState.lastResult = null;
+        viewState.practiceStage = "questions";
         render();
       });
     });
+
+    const backTopics = app.querySelector("[data-back-topics]");
+    if (backTopics) {
+      backTopics.addEventListener("click", () => {
+        viewState.practiceStage = "topics";
+        viewState.lastResult = null;
+        render();
+      });
+    }
 
     bindPracticeEvents();
     bindExamEvents();
@@ -4618,6 +4892,7 @@ window.QUESTION_BANK.push(
 
   function currentTitle() {
     const map = {
+      home: "复习入口",
       practice: "分知识点练习",
       mistakes: "错题板块",
       favorites: "收藏板块",
@@ -4631,14 +4906,80 @@ window.QUESTION_BANK.push(
   function currentSubtitle() {
     if (viewState.tab === "exam") return "按图片中的题型比例与重点权重，从 PDF 原题中抽取。";
     if (viewState.tab === "sources") return "所有题目均绑定原始 PDF、页码、题型与题号。";
+    if (viewState.tab === "practice" && viewState.practiceStage === "topics") return "先选择知识点，再进入对应题组。";
     return viewState.topic === "all" ? "当前显示全部知识点。" : topicName(viewState.topic);
   }
 
   function renderMainPanel() {
+    if (viewState.tab === "home") return renderHome();
+    if (viewState.tab === "practice" && viewState.practiceStage === "topics") return renderTopicSelection();
     if (viewState.tab === "exam") return renderExam();
     if (viewState.tab === "history") return renderHistory();
     if (viewState.tab === "sources") return renderSources();
     return renderPracticePanel();
+  }
+
+  function renderHome() {
+    const totalAttempts = Object.values(state.stats).reduce((sum, item) => sum + (item.personalAttempts || 0), 0);
+    const totalCorrect = Object.values(state.stats).reduce((sum, item) => sum + (item.personalCorrect || 0), 0);
+    const personalRate = totalAttempts ? `${Math.round((totalCorrect / totalAttempts) * 100)}%` : "0%";
+    return `
+      <section class="home-panel">
+        <div class="hero-copy">
+          <span>204 道 PDF 原题 · 本地记录</span>
+          <h2>按知识点刷题，按错题回收。</h2>
+          <p>首页只保留入口，进入练习后先选知识点，再进入题组答题。</p>
+        </div>
+        <div class="home-stats">
+          <div><strong>${questions.length}</strong><span>题号覆盖</span></div>
+          <div><strong>${state.mistakes.length}</strong><span>错题</span></div>
+          <div><strong>${state.favorites.length}</strong><span>收藏</span></div>
+          <div><strong>${personalRate}</strong><span>本人正确率</span></div>
+        </div>
+      </section>
+      <section class="quick-routes">
+        ${homeRoute("practice", "开始练习", "选择知识点后进入题组")}
+        ${homeRoute("mistakes", "错题回收", "只看答错过的题")}
+        ${homeRoute("favorites", "收藏夹", "复做标记题")}
+        ${homeRoute("exam", "预测卷", "打散考点综合测试")}
+        ${homeRoute("history", "训练记录", "查看历次得分")}
+        ${homeRoute("sources", "PDF 来源", "核对原始出处")}
+      </section>
+    `;
+  }
+
+  function homeRoute(tab, title, caption) {
+    return `<button class="route-card" data-tab="${tab}">
+      <strong>${title}</strong>
+      <span>${caption}</span>
+    </button>`;
+  }
+
+  function renderTopicSelection() {
+    const topicCards = [
+      { id: "all", name: "全部知识点", group: "总览", count: questions.length },
+      ...topics.map((topic) => ({
+        ...topic,
+        count: questions.filter((question) => question.topic === topic.id).length
+      }))
+    ];
+    return `
+      <section class="topic-select">
+        <div class="section-lead">
+          <h3>选择知识点</h3>
+          <p>进入后可用数字题号快速跳题，一行显示多个题号。</p>
+        </div>
+        <div class="topic-grid">
+          ${topicCards
+            .map((topic) => `<button class="topic-card ${viewState.topic === topic.id ? "active" : ""}" data-topic="${topic.id}">
+              <span>${topic.group || "知识点"}</span>
+              <strong>${topic.name}</strong>
+              <em>${topic.count} 题</em>
+            </button>`)
+            .join("")}
+        </div>
+      </section>
+    `;
   }
 
   function renderPracticePanel() {
@@ -4654,19 +4995,24 @@ window.QUESTION_BANK.push(
     const personalCorrect = stats.personalCorrect || 0;
 
     return `
+      ${viewState.tab === "practice" ? `<div class="practice-toolbar">
+        <button data-back-topics>更换知识点</button>
+        <span>${topicName(viewState.topic)} · ${list.length} 题</span>
+      </div>` : ""}
       <section class="practice-layout">
-        <div class="question-list">
+        <div class="question-map" aria-label="题号导航">
           ${list
             .map((item, index) => `<button class="${index === viewState.questionIndex ? "active" : ""}" data-jump="${index}">
-              <span>${item.id}</span>
+              <span>${questionNumber(item)}</span>
             </button>`)
             .join("")}
         </div>
         <article class="question-panel">
           <div class="question-meta">
+            <span>第 ${questionNumber(question)} 题</span>
             <span>${topicName(question.topic)}</span>
             <span>${typeLabel(question.type)}</span>
-            <span>${question.difficulty}</span>
+            <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
           </div>
           <h3>${escapeHtml(question.stem)}</h3>
           ${renderInput(question, "practice")}
@@ -4695,6 +5041,26 @@ window.QUESTION_BANK.push(
       fill: "填空",
       open: "开放"
     }[type];
+  }
+
+  function questionNumber(question) {
+    return questionNumbers.get(question.id) || questions.indexOf(question) + 1;
+  }
+
+  function difficultyLabel(difficulty) {
+    return {
+      easy: "简单",
+      medium: "中等",
+      hard: "困难"
+    }[difficulty] || "中等";
+  }
+
+  function difficultyClass(difficulty) {
+    return {
+      easy: "difficulty-easy",
+      medium: "difficulty-medium",
+      hard: "difficulty-hard"
+    }[difficulty] || "difficulty-medium";
   }
 
   function renderInput(question, scope) {
@@ -4922,9 +5288,11 @@ window.QUESTION_BANK.push(
     return `
       <article class="exam-question">
         <div class="question-meta">
-          <span>${index + 1}</span>
+          <span>卷面 ${index + 1}</span>
+          <span>题库 ${questionNumber(question)}</span>
           <span>${topicName(question.topic)}</span>
           <span>${typeLabel(question.type)}</span>
+          <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
           <span>${points(question)} 分</span>
         </div>
         <h3>${escapeHtml(question.stem)}</h3>
@@ -4994,7 +5362,7 @@ window.QUESTION_BANK.push(
         <div class="answer-key">
           ${buildExam()
             .map((question) => `<details>
-              <summary>${question.id} · ${formatAnswer(question)}</summary>
+              <summary>第 ${questionNumber(question)} 题 · ${formatAnswer(question)}</summary>
               <p>${escapeHtml(question.explanation || "")}</p>
               <p>${sourceLabel(question)}</p>
             </details>`)

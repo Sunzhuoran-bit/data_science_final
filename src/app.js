@@ -13,11 +13,13 @@
   const state = loadState();
   const topics = window.TOPICS || [];
   const questions = window.QUESTION_BANK || [];
+  const questionNumbers = new Map(questions.map((question, index) => [question.id, index + 1]));
 
   const viewState = {
-    tab: "practice",
+    tab: "home",
     topic: "all",
     questionIndex: 0,
+    practiceStage: "topics",
     lastResult: null,
     examAnswers: {},
     examResult: null
@@ -78,9 +80,9 @@
 
   function render() {
     app.innerHTML = `
-      <div class="shell">
-        <aside class="sidebar">
-          <div class="brand">
+      <div class="app-shell">
+        <header class="app-header">
+          <button class="brand" data-tab="home">
             <div class="brand-mark" aria-hidden="true">
               <span class="logo-bars"><i></i><i></i><i></i></span>
               <span class="logo-dot"></span>
@@ -89,8 +91,8 @@
               <h1>Final Review</h1>
               <p>source-bound practice</p>
             </div>
-          </div>
-          <nav class="nav">
+          </button>
+          <nav class="top-nav" aria-label="主导航">
             ${tabButton("practice", "练习")}
             ${tabButton("mistakes", "错题")}
             ${tabButton("favorites", "收藏")}
@@ -98,15 +100,9 @@
             ${tabButton("history", "记录")}
             ${tabButton("sources", "来源")}
           </nav>
-          <div class="topic-list">
-            ${topicButton("all", "全部知识点", questions.length)}
-            ${topics
-              .map((topic) => topicButton(topic.id, topic.name, questions.filter((question) => question.topic === topic.id).length))
-              .join("")}
-          </div>
-        </aside>
+        </header>
         <main class="main">
-          ${renderHeader()}
+          ${viewState.tab === "home" ? "" : renderHeader()}
           ${renderMainPanel()}
         </main>
       </div>
@@ -118,6 +114,8 @@
         viewState.questionIndex = 0;
         viewState.lastResult = null;
         viewState.examResult = null;
+        viewState.practiceStage = viewState.tab === "practice" ? "topics" : "questions";
+        if (viewState.tab !== "practice") viewState.topic = "all";
         render();
       });
     });
@@ -127,9 +125,19 @@
         viewState.topic = button.dataset.topic;
         viewState.questionIndex = 0;
         viewState.lastResult = null;
+        viewState.practiceStage = "questions";
         render();
       });
     });
+
+    const backTopics = app.querySelector("[data-back-topics]");
+    if (backTopics) {
+      backTopics.addEventListener("click", () => {
+        viewState.practiceStage = "topics";
+        viewState.lastResult = null;
+        render();
+      });
+    }
 
     bindPracticeEvents();
     bindExamEvents();
@@ -167,6 +175,7 @@
 
   function currentTitle() {
     const map = {
+      home: "复习入口",
       practice: "分知识点练习",
       mistakes: "错题板块",
       favorites: "收藏板块",
@@ -180,14 +189,80 @@
   function currentSubtitle() {
     if (viewState.tab === "exam") return "按图片中的题型比例与重点权重，从 PDF 原题中抽取。";
     if (viewState.tab === "sources") return "所有题目均绑定原始 PDF、页码、题型与题号。";
+    if (viewState.tab === "practice" && viewState.practiceStage === "topics") return "先选择知识点，再进入对应题组。";
     return viewState.topic === "all" ? "当前显示全部知识点。" : topicName(viewState.topic);
   }
 
   function renderMainPanel() {
+    if (viewState.tab === "home") return renderHome();
+    if (viewState.tab === "practice" && viewState.practiceStage === "topics") return renderTopicSelection();
     if (viewState.tab === "exam") return renderExam();
     if (viewState.tab === "history") return renderHistory();
     if (viewState.tab === "sources") return renderSources();
     return renderPracticePanel();
+  }
+
+  function renderHome() {
+    const totalAttempts = Object.values(state.stats).reduce((sum, item) => sum + (item.personalAttempts || 0), 0);
+    const totalCorrect = Object.values(state.stats).reduce((sum, item) => sum + (item.personalCorrect || 0), 0);
+    const personalRate = totalAttempts ? `${Math.round((totalCorrect / totalAttempts) * 100)}%` : "0%";
+    return `
+      <section class="home-panel">
+        <div class="hero-copy">
+          <span>204 道 PDF 原题 · 本地记录</span>
+          <h2>按知识点刷题，按错题回收。</h2>
+          <p>首页只保留入口，进入练习后先选知识点，再进入题组答题。</p>
+        </div>
+        <div class="home-stats">
+          <div><strong>${questions.length}</strong><span>题号覆盖</span></div>
+          <div><strong>${state.mistakes.length}</strong><span>错题</span></div>
+          <div><strong>${state.favorites.length}</strong><span>收藏</span></div>
+          <div><strong>${personalRate}</strong><span>本人正确率</span></div>
+        </div>
+      </section>
+      <section class="quick-routes">
+        ${homeRoute("practice", "开始练习", "选择知识点后进入题组")}
+        ${homeRoute("mistakes", "错题回收", "只看答错过的题")}
+        ${homeRoute("favorites", "收藏夹", "复做标记题")}
+        ${homeRoute("exam", "预测卷", "打散考点综合测试")}
+        ${homeRoute("history", "训练记录", "查看历次得分")}
+        ${homeRoute("sources", "PDF 来源", "核对原始出处")}
+      </section>
+    `;
+  }
+
+  function homeRoute(tab, title, caption) {
+    return `<button class="route-card" data-tab="${tab}">
+      <strong>${title}</strong>
+      <span>${caption}</span>
+    </button>`;
+  }
+
+  function renderTopicSelection() {
+    const topicCards = [
+      { id: "all", name: "全部知识点", group: "总览", count: questions.length },
+      ...topics.map((topic) => ({
+        ...topic,
+        count: questions.filter((question) => question.topic === topic.id).length
+      }))
+    ];
+    return `
+      <section class="topic-select">
+        <div class="section-lead">
+          <h3>选择知识点</h3>
+          <p>进入后可用数字题号快速跳题，一行显示多个题号。</p>
+        </div>
+        <div class="topic-grid">
+          ${topicCards
+            .map((topic) => `<button class="topic-card ${viewState.topic === topic.id ? "active" : ""}" data-topic="${topic.id}">
+              <span>${topic.group || "知识点"}</span>
+              <strong>${topic.name}</strong>
+              <em>${topic.count} 题</em>
+            </button>`)
+            .join("")}
+        </div>
+      </section>
+    `;
   }
 
   function renderPracticePanel() {
@@ -203,19 +278,24 @@
     const personalCorrect = stats.personalCorrect || 0;
 
     return `
+      ${viewState.tab === "practice" ? `<div class="practice-toolbar">
+        <button data-back-topics>更换知识点</button>
+        <span>${topicName(viewState.topic)} · ${list.length} 题</span>
+      </div>` : ""}
       <section class="practice-layout">
-        <div class="question-list">
+        <div class="question-map" aria-label="题号导航">
           ${list
             .map((item, index) => `<button class="${index === viewState.questionIndex ? "active" : ""}" data-jump="${index}">
-              <span>${item.id}</span>
+              <span>${questionNumber(item)}</span>
             </button>`)
             .join("")}
         </div>
         <article class="question-panel">
           <div class="question-meta">
+            <span>第 ${questionNumber(question)} 题</span>
             <span>${topicName(question.topic)}</span>
             <span>${typeLabel(question.type)}</span>
-            <span>${question.difficulty}</span>
+            <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
           </div>
           <h3>${escapeHtml(question.stem)}</h3>
           ${renderInput(question, "practice")}
@@ -244,6 +324,26 @@
       fill: "填空",
       open: "开放"
     }[type];
+  }
+
+  function questionNumber(question) {
+    return questionNumbers.get(question.id) || questions.indexOf(question) + 1;
+  }
+
+  function difficultyLabel(difficulty) {
+    return {
+      easy: "简单",
+      medium: "中等",
+      hard: "困难"
+    }[difficulty] || "中等";
+  }
+
+  function difficultyClass(difficulty) {
+    return {
+      easy: "difficulty-easy",
+      medium: "difficulty-medium",
+      hard: "difficulty-hard"
+    }[difficulty] || "difficulty-medium";
   }
 
   function renderInput(question, scope) {
@@ -471,9 +571,11 @@
     return `
       <article class="exam-question">
         <div class="question-meta">
-          <span>${index + 1}</span>
+          <span>卷面 ${index + 1}</span>
+          <span>题库 ${questionNumber(question)}</span>
           <span>${topicName(question.topic)}</span>
           <span>${typeLabel(question.type)}</span>
+          <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
           <span>${points(question)} 分</span>
         </div>
         <h3>${escapeHtml(question.stem)}</h3>
@@ -543,7 +645,7 @@
         <div class="answer-key">
           ${buildExam()
             .map((question) => `<details>
-              <summary>${question.id} · ${formatAnswer(question)}</summary>
+              <summary>第 ${questionNumber(question)} 题 · ${formatAnswer(question)}</summary>
               <p>${escapeHtml(question.explanation || "")}</p>
               <p>${sourceLabel(question)}</p>
             </details>`)
