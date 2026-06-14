@@ -8,3 +8,5 @@ __pycache__/
 .env
 .env.*
 *.log
+data/derived/pdf_pages/*_check*.png
+data/derived/pending_answers_audit.json

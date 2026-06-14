@@ -3,11 +3,13 @@
 期末复习项目，包含：
 
 - 按知识点整理的讲义式学案：`docs/study_guides/data_science_final_study_workbook.docx`
+- 全部题目答案与解析总表：`docs/answer_key.md`
 - PDF 题号覆盖审计：`docs/question_coverage.md`
 - 可交互网页端题库：`index.html`
 - 双击即用的离线单文件网页：`data_science_final.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
-- 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`
+- 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`、`data/full_coverage_questions.js`
+- 缺失答案补全补丁：`data/answer_overrides.js`
 
 ## Run
 
@@ -33,7 +35,7 @@ http://localhost:4173
 - 答错后自动进入错题本。
 - 支持收藏题目。
 - 保存本人作答次数、正确率、错题和每次预测卷记录。
-- PDF 文本缺失或标准答案未核对的题号会保留在题库中并标注“待核对”，不参与预测卷自动评分。
+- 204 道题均有参考答案和解析；原 PDF 仅保留题号但没有题干的 2 个条目保留在题库与答案表中，并明确标注来源空白。
 - 期末预测卷按图片中的题型结构与重点，从 PDF 原题中抽取。
 
 ## Data Policy
@@ -52,8 +54,10 @@ http://localhost:4173
 │   ├── derived/          # rendered pages used for visual checks
 │   ├── question_bank.js  # base source-bound question bank
 │   ├── supplemental_questions.js
-│   └── full_coverage_questions.js
+│   ├── full_coverage_questions.js
+│   └── answer_overrides.js
 ├── docs/
+│   ├── answer_key.md
 │   ├── question_coverage.md
 │   ├── study_guide.md
 │   └── study_guides/
