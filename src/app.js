@@ -26,6 +26,7 @@
   };
 
   const routeTabs = new Set(["home", "practice", "mistakes", "favorites", "exam", "history", "sources"]);
+  let routeStack = [];
 
   function applyRouteFromLocation() {
     const parts = decodeURIComponent(window.location.hash.replace(/^#/, "")).split("/").filter(Boolean);
@@ -56,9 +57,56 @@
     if (window.location.hash === hash) return;
     try {
       window.history[replace ? "replaceState" : "pushState"]({}, "", hash);
+      if (replace) {
+        if (routeStack.length) routeStack[routeStack.length - 1] = hash;
+        else routeStack.push(hash);
+      } else {
+        routeStack.push(hash);
+      }
     } catch {
       window.location.hash = hash;
     }
+  }
+
+  function syncRouteStackFromLocation() {
+    const hash = window.location.hash || currentRouteHash();
+    const index = routeStack.lastIndexOf(hash);
+    if (index >= 0) {
+      routeStack = routeStack.slice(0, index + 1);
+    } else {
+      routeStack = [hash];
+    }
+  }
+
+  function parentRoute() {
+    if (viewState.tab === "practice" && viewState.practiceStage === "questions") {
+      return { tab: "practice", topic: "all", practiceStage: "topics" };
+    }
+    if (viewState.tab !== "home") {
+      return { tab: "home", topic: "all", practiceStage: "topics" };
+    }
+    return null;
+  }
+
+  function applyRoute(route) {
+    viewState.tab = route.tab;
+    viewState.topic = route.topic || "all";
+    viewState.practiceStage = route.practiceStage || "topics";
+    viewState.questionIndex = 0;
+    viewState.lastResult = null;
+    viewState.examResult = null;
+  }
+
+  function goBack() {
+    if (routeStack.length > 1) {
+      window.history.back();
+      return;
+    }
+    const route = parentRoute();
+    if (!route) return;
+    applyRoute(route);
+    writeRoute(true);
+    render();
   }
 
   function loadState() {
@@ -116,28 +164,9 @@
 
   function render() {
     app.innerHTML = `
-      <div class="app-shell view-${viewState.tab}">
-        <header class="app-header">
-          <button class="brand" data-tab="home">
-            <div class="brand-mark" aria-hidden="true">
-              <span class="logo-bars"><i></i><i></i><i></i></span>
-              <span class="logo-dot"></span>
-            </div>
-            <div>
-              <h1>Final Review</h1>
-            </div>
-          </button>
-          <nav class="top-nav" aria-label="主导航">
-            ${tabButton("practice", "练习")}
-            ${tabButton("mistakes", "错题")}
-            ${tabButton("favorites", "收藏")}
-            ${tabButton("exam", "预测卷")}
-            ${tabButton("history", "记录")}
-            ${tabButton("sources", "来源")}
-          </nav>
-        </header>
-        <main class="main">
-          ${viewState.tab === "home" ? "" : renderHeader()}
+      <div class="app-shell-v2 view-${viewState.tab}">
+        <main class="main-v2">
+          ${viewState.tab === "home" ? "" : renderPageBar()}
           ${renderMainPanel()}
         </main>
       </div>
@@ -162,18 +191,19 @@
         viewState.questionIndex = 0;
         viewState.lastResult = null;
         viewState.practiceStage = "questions";
-        writeRoute(true);
+        writeRoute();
         render();
       });
+    });
+
+    app.querySelectorAll("[data-go-back]").forEach((button) => {
+      button.addEventListener("click", goBack);
     });
 
     const backTopics = app.querySelector("[data-back-topics]");
     if (backTopics) {
       backTopics.addEventListener("click", () => {
-        viewState.practiceStage = "topics";
-        viewState.lastResult = null;
-        writeRoute(true);
-        render();
+        goBack();
       });
     }
 
@@ -183,6 +213,15 @@
 
   function tabButton(tab, label) {
     return `<button class="nav-button ${viewState.tab === tab ? "active" : ""}" data-tab="${tab}">${label}</button>`;
+  }
+
+  function renderPageBar() {
+    return `
+      <header class="pagebar-v2">
+        <button class="back-v2" data-go-back aria-label="返回上一级">返回</button>
+        <h2>${currentTitle()}</h2>
+      </header>
+    `;
   }
 
   function topicButton(id, label, count) {
@@ -212,20 +251,21 @@
   }
 
   function currentTitle() {
+    if (viewState.tab === "practice") {
+      return viewState.practiceStage === "topics" ? "选择知识点" : topicName(viewState.topic);
+    }
     const map = {
-      home: "复习入口",
-      practice: "分知识点练习",
-      mistakes: "错题板块",
-      favorites: "收藏板块",
-      exam: "期末预测综合测试",
+      home: "Final Review",
+      mistakes: "错题本",
+      favorites: "收藏夹",
+      exam: "预测卷",
       history: "训练记录",
-      sources: "来源"
+      sources: "PDF 来源"
     };
     return map[viewState.tab];
   }
 
   function currentSubtitle() {
-    if (viewState.tab === "exam") return "按图片中的题型比例与重点权重，从 PDF 原题中抽取。";
     return "";
   }
 
@@ -256,7 +296,7 @@
       </section>
       <section class="quick-routes">
         ${homeRoute("practice", "开始练习")}
-        ${homeRoute("mistakes", "错题回收")}
+        ${homeRoute("mistakes", "错题本")}
         ${homeRoute("favorites", "收藏夹")}
         ${homeRoute("exam", "预测卷")}
         ${homeRoute("history", "训练记录")}
@@ -311,7 +351,7 @@
 
     return `
       ${viewState.tab === "practice" ? `<div class="practice-toolbar">
-        <button data-back-topics>更换知识点</button>
+        <button data-back-topics>切换知识点</button>
         <span>${topicName(viewState.topic)} · ${list.length} 题</span>
       </div>` : ""}
       <section class="practice-layout">
@@ -762,9 +802,12 @@
   }
 
   applyRouteFromLocation();
+  routeStack = [currentRouteHash()];
   writeRoute(!window.location.hash);
+  syncRouteStackFromLocation();
   window.addEventListener("popstate", () => {
     applyRouteFromLocation();
+    syncRouteStackFromLocation();
     render();
   });
   render();

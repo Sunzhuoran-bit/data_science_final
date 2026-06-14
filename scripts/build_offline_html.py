@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "data_science_final_review_offline.html"
+OUTPUT = ROOT / "data_science_final.html"
 
 
 def read_text(path: str) -> str:
@@ -32,7 +32,7 @@ def main() -> None:
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Data Science Final Review Offline</title>
+    <title>data_science_final</title>
     <style>
 {styles}
     </style>

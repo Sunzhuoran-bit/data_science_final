@@ -317,7 +317,7 @@ def add_cover(doc: Document, questions: list[dict], topics: list[dict]) -> None:
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(12)
-    r = p.add_run("Data Science Final Review")
+    r = p.add_run("data_science_final")
     set_run_font(r, size=24, bold=True, color="1F4D78")
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER

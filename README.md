@@ -1,17 +1,17 @@
-# Data Science Final Review
+# data_science_final
 
 期末复习项目，包含：
 
 - 按知识点整理的讲义式学案：`docs/study_guides/data_science_final_study_workbook.docx`
 - PDF 题号覆盖审计：`docs/question_coverage.md`
 - 可交互网页端题库：`index.html`
-- 双击即用的离线单文件网页：`data_science_final_review_offline.html`
+- 双击即用的离线单文件网页：`data_science_final.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
 - 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`
 
 ## Run
 
-最简单方式：直接双击打开 `data_science_final_review_offline.html`，无需启动 Python。
+最简单方式：直接双击打开 `data_science_final.html`，无需启动 Python。
 
 如果需要用本地服务预览多文件版，再运行：
 
@@ -30,7 +30,7 @@ http://localhost:4173
 - 按知识点练习判断、选择、填空、开放题。
 - 当前覆盖 4 个作业反馈 PDF 的 204 个唯一题号。
 - 每题显示原始 PDF、页码、题型和题号。
-- 答错后自动进入错题板块。
+- 答错后自动进入错题本。
 - 支持收藏题目。
 - 保存本人作答次数、正确率、错题和每次预测卷记录。
 - PDF 文本缺失或标准答案未核对的题号会保留在题库中并标注“待核对”，不参与预测卷自动评分。
@@ -51,7 +51,8 @@ http://localhost:4173
 │   ├── extracted/        # UTF-8 text extracted from PDFs
 │   ├── derived/          # rendered pages used for visual checks
 │   ├── question_bank.js  # base source-bound question bank
-│   └── supplemental_questions.js
+│   ├── supplemental_questions.js
+│   └── full_coverage_questions.js
 ├── docs/
 │   ├── question_coverage.md
 │   ├── study_guide.md
@@ -60,5 +61,6 @@ http://localhost:4173
 │   ├── app.js
 │   └── styles.css
 ├── index.html
+├── data_science_final.html
 └── README.md
 ```
