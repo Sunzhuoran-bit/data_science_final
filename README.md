@@ -5,10 +5,15 @@
 - 按知识点整理的讲义式学案：`docs/study_guides/data_science_final_study_workbook.docx`
 - PDF 题号覆盖审计：`docs/question_coverage.md`
 - 可交互网页端题库：`index.html`
+- 双击即用的离线单文件网页：`data_science_final_review_offline.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
 - 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`
 
 ## Run
+
+最简单方式：直接双击打开 `data_science_final_review_offline.html`，无需启动 Python。
+
+如果需要用本地服务预览多文件版，再运行：
 
 ```powershell
 python -m http.server 4173

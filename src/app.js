@@ -4,7 +4,11 @@
   const app = document.getElementById("app");
   if (new URLSearchParams(window.location.search).has("reset")) {
     localStorage.removeItem(storageKey);
-    window.history.replaceState({}, "", window.location.pathname);
+    try {
+      window.history.replaceState({}, "", window.location.href.split("?")[0]);
+    } catch {
+      // file:// pages may restrict history updates in some browsers.
+    }
   }
   const state = loadState();
   const topics = window.TOPICS || [];
