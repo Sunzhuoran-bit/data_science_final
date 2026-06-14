@@ -8,7 +8,7 @@
 - 可交互网页端题库：`index.html`
 - 双击即用的离线单文件网页：`data_science_final.html`
 - PDF 原始资料与抽取文本：`data/raw`、`data/extracted`
-- 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`、`data/full_coverage_questions.js`
+- 题库数据与溯源字段：`data/question_bank.js`、`data/supplemental_questions.js`、`data/full_coverage_questions.js`、`data/final_bank_questions.js`
 - 缺失答案补全补丁：`data/answer_overrides.js`
 
 ## Run
@@ -30,12 +30,12 @@ http://localhost:4173
 ## Features
 
 - 按知识点练习判断、选择、填空、开放题。
-- 当前覆盖 4 个作业反馈 PDF 的 204 个唯一题号。
+- 当前覆盖 4 个作业反馈 PDF 与 `作业反馈_期末题库.pdf` 的 286 道题。
 - 每题显示原始 PDF、页码、题型和题号。
 - 答错后自动进入错题本。
 - 支持收藏题目。
 - 保存本人作答次数、正确率、错题和每次预测卷记录。
-- 204 道题均有参考答案和解析；原 PDF 仅保留题号但没有题干的 2 个条目保留在题库与答案表中，并明确标注来源空白。
+- 286 道题均有参考答案和解析；原 PDF 仅保留题号但没有题干的 2 个条目保留在题库与答案表中，并明确标注来源空白。
 - 期末预测卷按图片中的题型结构与重点，从 PDF 原题中抽取。
 
 ## Data Policy
@@ -55,6 +55,7 @@ http://localhost:4173
 │   ├── question_bank.js  # base source-bound question bank
 │   ├── supplemental_questions.js
 │   ├── full_coverage_questions.js
+│   ├── final_bank_questions.js
 │   └── answer_overrides.js
 ├── docs/
 │   ├── answer_key.md

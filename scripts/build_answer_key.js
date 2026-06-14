@@ -8,6 +8,7 @@ const files = [
   "data/question_bank.js",
   "data/supplemental_questions.js",
   "data/full_coverage_questions.js",
+  "data/final_bank_questions.js",
   "data/answer_overrides.js"
 ];
 
