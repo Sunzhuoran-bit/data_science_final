@@ -26,6 +26,7 @@ def main() -> None:
             "data/full_coverage_questions.js",
             "data/final_bank_questions.js",
             "data/answer_overrides.js",
+            "data/merge_overrides.js",
             "src/app.js",
         ]
     )

@@ -9,7 +9,8 @@ const files = [
   "data/supplemental_questions.js",
   "data/full_coverage_questions.js",
   "data/final_bank_questions.js",
-  "data/answer_overrides.js"
+  "data/answer_overrides.js",
+  "data/merge_overrides.js"
 ];
 
 const sandbox = {
@@ -27,11 +28,25 @@ const questions = sandbox.window.QUESTION_BANK || [];
 const topics = new Map((sandbox.window.TOPICS || []).map((topic) => [topic.id, topic.name]));
 const sourceFiles = sandbox.window.SOURCE_FILES || {};
 
-function sourceLabel(question) {
-  const source = question.source || {};
+function questionSources(question) {
+  if (Array.isArray(question.sources) && question.sources.length) return question.sources;
+  return question.source ? [question.source] : [];
+}
+
+function formatSource(source) {
   const file = sourceFiles[source.sourceId] || {};
   const fileName = file.originalFile || source.sourceId || "未知来源";
   return `${fileName}，p.${source.page || "?"}，${source.section || ""}第 ${source.question || "?"} 题`;
+}
+
+function sourceLabel(question) {
+  return questionSources(question).map(formatSource).join(" & ") || "未知来源";
+}
+
+function needsPriorityReview(question) {
+  return Boolean(question.reviewPriority) || questionSources(question).some((source) => {
+    return source.sourceId === "final" || source.sourceId === "af3";
+  });
 }
 
 function typeLabel(type) {
@@ -86,6 +101,9 @@ questions.forEach((question, index) => {
   lines.push(`- 来源：${sourceLabel(question)}`);
   lines.push(`- 知识点：${topics.get(question.topic) || question.topic || "未归类"}`);
   lines.push(`- 题型：${typeLabel(question.type)}；难度：${difficultyLabel(question.difficulty)}`);
+  if (needsPriorityReview(question)) {
+    lines.push("- 重点标注：重点");
+  }
   if (question.sourceTextMissing) {
     lines.push("- 来源状态：原 PDF 题干或选项不可机读，已按页面可见内容或空白题号说明处理");
   }

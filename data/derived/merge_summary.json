@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-06-15T03:30:36.717Z",
+  "sourceReports": [
+    "docs/duplicate_report.md",
+    "docs/similar_report.md"
+  ],
+  "decisions": {
+    "merge": 73,
+    "keep": 3
+  },
+  "originalQuestionCount": 286,
+  "mergeGroupCount": 73,
+  "removedQuestionCount": 73,
+  "mergedQuestionCount": 213,
+  "keptGroups": [
+    {
+      "file": "docs/similar_report.md",
+      "title": "相似组 8：第31题, 第70题, 第159题, 第160题, 第161题, 第166题, 第172题, 第250题",
+      "ids": [
+        "af3-sc-002",
+        "af3-sc-012",
+        "af3-sc-006",
+        "af3-sc-007",
+        "af3-sc-009",
+        "af3-mc-017",
+        "af3-sc-028",
+        "final-sc-018"
+      ],
+      "decision": "keep"
+    },
+    {
+      "file": "docs/similar_report.md",
+      "title": "相似组 18：第67题, 第68题, 第247题, 第248题",
+      "ids": [
+        "af3-sc-003",
+        "af3-sc-004",
+        "final-sc-015",
+        "final-sc-016"
+      ],
+      "decision": "keep"
+    },
+    {
+      "file": "docs/similar_report.md",
+      "title": "相似组 41：第182题, 第187题",
+      "ids": [
+        "af4-sc-005",
+        "af4-sc-015"
+      ],
+      "decision": "keep"
+    }
+  ],
+  "missingIds": []
+}

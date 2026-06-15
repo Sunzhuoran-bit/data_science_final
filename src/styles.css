@@ -176,11 +176,32 @@ button:focus-visible {
 
 .nav-button.active,
 .topic-button.active,
-.question-list button.active,
-.question-map button.active {
+.question-list button.active {
   background: var(--green);
   color: #fff;
   border-color: var(--green);
+}
+
+.question-map button.active {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(31, 122, 77, 0.16);
+}
+
+.question-map button.answered-correct {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.question-map button.answered-wrong {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.question-map button.answered-correct.active,
+.question-map button.answered-wrong.active {
+  box-shadow: 0 0 0 3px rgba(29, 37, 32, 0.18);
 }
 
 .top-nav {
@@ -362,6 +383,13 @@ button:focus-visible {
   background: var(--red-soft);
 }
 
+.question-meta .review-priority-pill {
+  color: #7a3e09;
+  background: #fff0d6;
+  border: 1px solid #f1bd72;
+  font-weight: 800;
+}
+
 h3 {
   margin: 0 0 16px;
   font-size: 18px;
@@ -456,6 +484,23 @@ textarea {
 
 .result strong {
   font-weight: 800;
+}
+
+.self-grade-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.self-grade-actions button {
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.self-grade-actions button[data-correct="false"] {
+  border-color: #efbcbc;
+  color: var(--red);
 }
 
 .stats-row {

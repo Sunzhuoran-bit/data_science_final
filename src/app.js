@@ -119,9 +119,19 @@
   }
 
   function stripSiteStats(nextState) {
+    nextState.favorites = Array.isArray(nextState.favorites) ? nextState.favorites : [];
+    nextState.mistakes = Array.isArray(nextState.mistakes) ? nextState.mistakes : [];
+    nextState.stats = nextState.stats || {};
+    nextState.sessions = Array.isArray(nextState.sessions) ? nextState.sessions : [];
+    nextState.practiceRounds = nextState.practiceRounds || {};
     Object.values(nextState.stats || {}).forEach((item) => {
       delete item.siteAttempts;
       delete item.siteCorrect;
+    });
+    Object.keys(nextState.practiceRounds).forEach((key) => {
+      if (nextState.practiceRounds[key]?.completed) {
+        nextState.practiceRounds[key] = { answers: {}, completed: false };
+      }
     });
     return nextState;
   }
@@ -131,6 +141,7 @@
       favorites: [],
       mistakes: [],
       stats: {},
+      practiceRounds: {},
       sessions: []
     };
   }
@@ -139,10 +150,24 @@
     localStorage.setItem(storageKey, JSON.stringify(state));
   }
 
-  function sourceLabel(question) {
-    const source = question.source || {};
+  function questionSources(question) {
+    if (Array.isArray(question.sources) && question.sources.length) return question.sources;
+    return question.source ? [question.source] : [];
+  }
+
+  function formatSource(source) {
     const file = window.SOURCE_FILES[source.sourceId] || {};
     return `${file.originalFile || source.sourceId} · p.${source.page || "?"} · ${source.section || ""} ${source.question || ""}`;
+  }
+
+  function sourceLabel(question) {
+    return questionSources(question).map(formatSource).join(" & ") || "未知来源";
+  }
+
+  function needsPriorityReview(question) {
+    return Boolean(question.reviewPriority) || questionSources(question).some((source) => {
+      return source.sourceId === "final" || source.sourceId === "af3";
+    });
   }
 
   function topicName(id) {
@@ -291,7 +316,7 @@
           <div><strong>${questions.length}</strong><span>总题数</span></div>
           <div><strong>${state.mistakes.length}</strong><span>错题</span></div>
           <div><strong>${state.favorites.length}</strong><span>收藏</span></div>
-          <div><strong>${personalRate}</strong><span>本人正确率</span></div>
+          <div><strong>${personalRate}</strong><span>正确率</span></div>
         </div>
       </section>
       <section class="quick-routes">
@@ -348,6 +373,7 @@
     const stats = state.stats[question.id] || {};
     const personalAttempts = stats.personalAttempts || 0;
     const personalCorrect = stats.personalCorrect || 0;
+    const round = currentPracticeRound();
 
     return `
       ${viewState.tab === "practice" ? `<div class="practice-toolbar">
@@ -357,7 +383,7 @@
       <section class="practice-layout">
         <div class="question-map" aria-label="题号导航">
           ${list
-            .map((item, index) => `<button class="${index === viewState.questionIndex ? "active" : ""}" data-jump="${index}">
+            .map((item, index) => `<button class="${questionMapClass(item, index, round)}" data-jump="${index}">
               <span>${questionNumber(item)}</span>
             </button>`)
             .join("")}
@@ -368,6 +394,7 @@
             <span>${topicName(question.topic)}</span>
             <span>${typeLabel(question.type)}</span>
             <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
+            ${needsPriorityReview(question) ? `<span class="review-priority-pill">重点</span>` : ""}
           </div>
           <h3>${escapeHtml(question.stem)}</h3>
           ${renderInput(question, "practice")}
@@ -379,8 +406,8 @@
           </div>
           ${renderLastResult(question)}
           <div class="stats-row">
-            <div><span>${personalAttempts}</span><label>本人次数</label></div>
-            <div><span>${rate(personalCorrect, personalAttempts)}</span><label>本人正确率</label></div>
+            <div><span>${personalAttempts}</span><label>作答次数</label></div>
+            <div><span>${rate(personalCorrect, personalAttempts)}</span><label>正确率</label></div>
           </div>
           <footer class="source-line">${sourceLabel(question)}</footer>
         </article>
@@ -400,6 +427,38 @@
 
   function questionNumber(question) {
     return questionNumbers.get(question.id) || questions.indexOf(question) + 1;
+  }
+
+  function practiceScopeKey() {
+    return `${viewState.tab}:${viewState.topic}`;
+  }
+
+  function currentPracticeRound() {
+    const key = practiceScopeKey();
+    const round = state.practiceRounds[key] || { answers: {}, completed: false };
+    round.answers = round.answers || {};
+    state.practiceRounds[key] = round;
+    return round;
+  }
+
+  function questionMapClass(question, index, round) {
+    const classes = [];
+    if (index === viewState.questionIndex) classes.push("active");
+    if (Object.prototype.hasOwnProperty.call(round.answers, question.id)) {
+      classes.push(round.answers[question.id] ? "answered-correct" : "answered-wrong");
+    }
+    return classes.join(" ");
+  }
+
+  function recordPracticeRound(questionId, correct) {
+    const round = currentPracticeRound();
+    round.answers[questionId] = Boolean(correct);
+    const list = questionsForCurrentView();
+    round.completed = list.length > 0 && list.every((question) => Object.prototype.hasOwnProperty.call(round.answers, question.id));
+  }
+
+  function needsManualPracticeGrade(question) {
+    return question.type === "fill" && !question.answerPending;
   }
 
   function difficultyLabel(difficulty) {
@@ -454,10 +513,21 @@
     const result = viewState.lastResult;
     if (!result || result.questionId !== question.id) return "";
     const resultClass = result.pending ? "pending" : result.correct ? "correct" : "wrong";
+    const submittedAnswer = result.selfGrade
+      ? `<p><strong>你的答案：</strong>${escapeHtml(result.userAnswer || "（空）")}</p>`
+      : "";
+    const selfGradeActions = result.selfGrade
+      ? `<div class="self-grade-actions" aria-label="填空题自评">
+          <button class="primary" data-self-grade="${question.id}" data-correct="true">我答对了</button>
+          <button data-self-grade="${question.id}" data-correct="false">我答错了</button>
+        </div>`
+      : "";
     return `
       <div class="result ${resultClass}">
+        ${submittedAnswer}
         <p><strong>参考答案：</strong>${formatAnswer(question)}</p>
         <p>${escapeHtml(question.explanation || "")}</p>
+        ${selfGradeActions}
       </div>
     `;
   }
@@ -499,14 +569,34 @@
       });
     }
 
+    app.querySelectorAll("[data-self-grade]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const questionId = button.dataset.selfGrade;
+        const correct = button.dataset.correct === "true";
+        recordAttempt(questionId, correct);
+        recordPracticeRound(questionId, correct);
+        if (!correct && !state.mistakes.includes(questionId)) state.mistakes.push(questionId);
+        viewState.lastResult = { questionId, correct, pending: false };
+        saveState();
+        render();
+      });
+    });
+
     const submit = app.querySelector("[data-submit-practice]");
     if (submit) {
       submit.addEventListener("click", () => {
         const question = questions.find((item) => item.id === submit.dataset.submitPractice);
         const userAnswer = readAnswer(question, "practice");
+        if (needsManualPracticeGrade(question)) {
+          viewState.lastResult = { questionId: question.id, correct: null, pending: true, selfGrade: true, userAnswer };
+          saveState();
+          render();
+          return;
+        }
         const correct = checkAnswer(question, userAnswer);
         if (correct !== null) {
           recordAttempt(question.id, correct);
+          recordPracticeRound(question.id, correct);
           if (!correct && !state.mistakes.includes(question.id)) state.mistakes.push(question.id);
         }
         viewState.lastResult = { questionId: question.id, correct, pending: correct === null };
@@ -648,6 +738,7 @@
           <span>${topicName(question.topic)}</span>
           <span>${typeLabel(question.type)}</span>
           <span class="difficulty-pill ${difficultyClass(question.difficulty)}">${difficultyLabel(question.difficulty)}</span>
+          ${needsPriorityReview(question) ? `<span class="review-priority-pill">重点</span>` : ""}
           <span>${points(question)} 分</span>
         </div>
         <h3>${escapeHtml(question.stem)}</h3>

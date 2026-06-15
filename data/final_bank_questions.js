@@ -233,8 +233,8 @@
       type: "true_false",
       difficulty: "easy",
       stem: "朴素贝叶斯算法之所以被称为“朴素”，是因为它在进行概率计算时，做出了一个理想化的假设：即所有的特征之间都是相互独立的，不存在任何相关性。",
-      answer: true,
-      explanation: "课程题中这里考查朴素贝叶斯的条件独立假设，即给定类别后各特征相互独立。",
+      answer: false,
+      explanation: "朴素贝叶斯的“朴素”是假设在给定类别条件下各特征相互独立，而不是所有特征在无条件意义下绝对独立、不存在任何相关性。",
       source: source(2, "判断题", 21),
       finalExam: true
     },
